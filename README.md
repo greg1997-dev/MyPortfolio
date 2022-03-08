@@ -16,3 +16,9 @@ On this portfolio you can find things from exploring who is the best rated NFL p
 - Feature engineering on deck in which passenger was assigned
 - Filled NULL values in numeric dimensions with average of the column
 - This project graded 0.77751 on accuracy
+
+# [Third Project: NFL Combine measurements importance]()
+- This project was to try to identify the most important variables for scouts to Draft a Prospect
+- Random Forest Classifier with high recall
+- School from which the prospect comes, 40 yd dash time, and Weight are the most important features
+- AUC=0.72
