@@ -22,3 +22,11 @@ This are some projects I've been working on throughout my career. As a sports fa
 - Random Forest Classifier with high recall
 - School from which the prospect comes, 40 yd dash time, and Weight are the most important features
 - AUC=0.72
+
+#[March Madness Kaggle Competition 2022]()
+- This project was used in the [March Machine Learning Mania 2022 - Men’s](https://www.kaggle.com/competitions/mens-march-mania-2022/overview) competition to predict the bracket
+- Logistic Regression with CV was used for predicting the bracket
+- Avg. Log Loss of the algorithm 0.68492
+- Calculate probability of win for a team
+- Beat the auto bracket (all teams have equal probability to win)
+- Predicted St. Peter's Peacocks upset over No.2 Seed Kentucky and No. 3 Seed Purdue
