@@ -1,10 +1,9 @@
 # MyPortfolio
 My Data Science Portfolio
-## What you will find
-This are some projects I've been working on throughout my career. As a sports fan, I've focused my projects on sports analytics. Also, I have included some projects I made during my Specialization in Data Science
+
 
 # [NLP Project Assignment](https://github.com/greg1997-dev/MyPortfolio/blob/main/Big_Data_Project.ipynb)
-- Took Amazon Reviews Dataset (you can find the dataset [here]())
+- Took Amazon Reviews Dataset (you can find the dataset [here](https://www.kaggle.com/datasets/bittlingmayer/amazonreviews))
 - Looked at the most common reviews
 - EDA 
 - Created a topic classifier with an Latent Dichrilet Allocator (LDA)
@@ -23,10 +22,17 @@ This are some projects I've been working on throughout my career. As a sports fa
 - School from which the prospect comes, 40 yd dash time, and Weight are the most important features
 - AUC=0.72
 
-#[March Madness Kaggle Competition 2022]()
+# [March Madness Kaggle Competition 2022](https://github.com/greg1997-dev/MyPortfolio/blob/main/March_Madness.ipynb)
 - This project was used in the [March Machine Learning Mania 2022 - Men’s](https://www.kaggle.com/competitions/mens-march-mania-2022/overview) competition to predict the bracket
 - Logistic Regression with CV was used for predicting the bracket
 - Avg. Log Loss of the algorithm 0.68492
 - Calculate probability of win for a team
 - Beat the auto bracket (all teams have equal probability to win)
 - Predicted St. Peter's Peacocks upset over No.2 Seed Kentucky and No. 3 Seed Purdue
+
+
+# [Insurance Project](https://github.com/greg1997-dev/MyPortfolio/blob/main/Proyecto_Seguros.ipynb)
+- Analyzed a Dataset and predict if a user would renew its insurance policy or not
+- After an EDA we identified that users without a license we the most likely to not buy an insurance
+- Users with older vehicles were more inclined to buy insurance policies
+- Decision Tree was the best option for classifying users that were prone to buy an insurance policy
