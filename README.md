@@ -18,9 +18,12 @@ My Data Science Portfolio
 
 # [NFL Combine measurements importance](https://github.com/greg1997-dev/MyPortfolio/blob/main/NFL_Combine.ipynb)
 - This project was to try to identify the most important variables for scouts to Draft a Prospect
+- Compared Logistic Regression vs Random Forest Classifier and provide a better example
 - Random Forest Classifier with high recall
+- RFC with 700 trees
 - School from which the prospect comes, 40 yd dash time, and Weight are the most important features
-- AUC=0.72
+- AUC=0.82
+
 
 # [March Madness Kaggle Competition 2022](https://github.com/greg1997-dev/MyPortfolio/blob/main/March_Madness.ipynb)
 - This project was used in the [March Machine Learning Mania 2022 - Men’s](https://www.kaggle.com/competitions/mens-march-mania-2022/overview) competition to predict the bracket
