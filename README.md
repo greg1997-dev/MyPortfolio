@@ -40,7 +40,7 @@ My Data Science Portfolio
 - Users with older vehicles were more inclined to buy insurance policies
 - Decision Tree was the best option for classifying users that were prone to buy an insurance policy
 
-# [Markowitz Model for Optimal Portfolio]()
+# [Markowitz Model for Optimal Portfolio](https://github.com/greg1997-dev/MyPortfolio/blob/main/notebooks/Markowitz.ipynb)
 - Took the stocks listed on Reto Actinver and tried to achieve the most profitable portfolio
 - Simulated >100,000 portfolios from 10 stocks in order to use these stocks to buy within the trading challenge
 - Multiple weeks sitting at top 3 places on best portfolios.
