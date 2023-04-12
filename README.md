@@ -51,7 +51,7 @@ My Data Science Portfolio
 
 # [Markowitz Model for Optimal Portfolio](https://github.com/greg1997-dev/MyPortfolio/blob/main/notebooks/Markowitz.ipynb)
 - Multiple weeks sitting at top 3 places on best portfolios on Trading Challenge called Reto Actinver
-The methodology was:
+- The methodology was:
 
   * Download the stock prices with the yfinance library
   * Clean the data and calculate:
@@ -60,6 +60,6 @@ The methodology was:
     * Portfolio Risk
     * Portfolio Returns
     * Sharpe Ratio
-- Create a function that created random weights for selecting a 10 stock portfolio randomly
-- Create 100,000 random portfolios
-- Save the next best portfolio given the return
+  * Create a function that created random weights for selecting a 10 stock portfolio randomly
+  * Create 100,000 random portfolios 
+  * Save the next best portfolio given the return
