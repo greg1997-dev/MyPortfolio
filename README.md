@@ -52,7 +52,6 @@ My Data Science Portfolio
 # [Markowitz Model for Optimal Portfolio](https://github.com/greg1997-dev/MyPortfolio/blob/main/notebooks/Markowitz.ipynb)
 - Multiple weeks sitting at top 3 places on best portfolios on Trading Challenge called Reto Actinver
 - The methodology was:
-
   * Download the stock prices with the yfinance library
   * Clean the data and calculate:
     * Mean Returns
