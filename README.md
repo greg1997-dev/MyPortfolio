@@ -50,7 +50,7 @@ My Data Science Portfolio
 ***
 
 # [Markowitz Model for Optimal Portfolio](https://github.com/greg1997-dev/MyPortfolio/blob/main/notebooks/Markowitz.ipynb)
-- Multiple weeks sitting at top 3 places on best portfolios on Trading Challenge called Reto Actinver
+- Multiple weeks sitting at top 3 places on best portfolios on Reto Actinver 2022
 - The methodology was:
   * Download the stock prices with the yfinance library
   * Clean the data and calculate:
@@ -62,3 +62,20 @@ My Data Science Portfolio
   * Create a function that created random weights for selecting a 10 stock portfolio randomly
   * Create 100,000 random portfolios 
   * Save the next best portfolio given the return
+
+ ***
+
+ # [Probability and Statistics Course at Universidad Panamericana](https://github.com/greg1997-dev/Prob_and_Stats)
+ - Leveraging the R programming language, students were able to have a deeper understanding of Probability and Statistics concepts such as:
+  * Conditional Probability
+  * Discrete Probability Distributions
+  * Continuous Probability Distributions
+  * Analysis of Variance
+  * Experimental Design
+
+***
+
+ # [Sankey Report for Laboratory](https://storage.googleapis.com/objects-hosted/Screenshot%202024-03-13%20at%2012.00.24%20PM.png)
+ - Develop a whole data pipeline to provide ad hoc analytics on evaluating Lab Workers to correctly identify blood cells through a specific methodology.
+ - Whole architecture is hosted on GCP with the final product is delivered through Looker Studio
+ - Participants in this quality program are evaluated in two ways: the monthly expert, and an expert consensus to insure an unbiased assessment.
