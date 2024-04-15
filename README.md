@@ -42,7 +42,9 @@
 - RFC with 700 trees
 - School from which the prospect comes, 40 yd dash time, and Weight are the most important features
 - AUC=0.82
+
 ## Next Steps on NFL Combine Model
+
 - We are using merely the Combine to determine if we draft a player or not, further data is required.
 - There are great prospects that don't assist to the combine or they do a Pro Day at their campus. That is why names like Derek Stingley Jr, Drake London, Kenny Pickett that the model opts to not draft. The model may have a selection bias due to variable omission.
 - Hyperparameter tuning would be a nice to have within the Pipeline. The model is compiled merely "as-is" from SciKit Learn.
