@@ -1,4 +1,4 @@
-
+# Projects:
 
 # [Markowitz Model for Optimal Portfolio](https://github.com/greg1997-dev/MyPortfolio/blob/main/notebooks/Markowitz.ipynb)
 - Multiple weeks sitting at top 3 places on best portfolios on Reto Actinver 2022
