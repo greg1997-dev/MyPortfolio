@@ -1,6 +1,6 @@
 # Site settings
-title: Andres Gregori Portfolio  # Replace with your name
-email: data_services@gregory.mx  # Replace with your email address
+title: Andres Gregori Portfolio 
+email: data_services@gregory.mx  
 description: Data Science Enthusiast with a passion for using machine learning and data analysis to solve real-world problems. 
 Skilled in Python libraries like R and Scikit-Learn for data manipulation, model building, and visualization. 
 Proven ability to leverage data insights to create effective solutions. 
@@ -11,15 +11,3 @@ Experience with a variety of projects including portfolio optimization, sports a
 theme: minima 
 
 
-plugins:
-  - jekyll-paginate  # Pagination for long lists of content
-
-
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
