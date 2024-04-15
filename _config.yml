@@ -10,6 +10,7 @@ description: >
 
 
 theme: minima 
+markdown: kramdown
 
 plugins:
   - jekyll-feed
