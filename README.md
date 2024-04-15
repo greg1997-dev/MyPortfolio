@@ -18,8 +18,8 @@
 
  ***
 
+
  # [Probability and Statistics Course at Universidad Panamericana](https://github.com/greg1997-dev/Prob_and_Stats)
- 
  - Leveraging the R programming language, students were able to have a deeper understanding of Probability and Statistics concepts such as:
   * Conditional Probability
   * Discrete Probability Distributions
@@ -29,8 +29,8 @@
 
 ***
 
+
  # [Sankey Report for Laboratory](https://storage.googleapis.com/objects-hosted/Screenshot%202024-03-13%20at%2012.00.24%20PM.png)
- 
  - Develop a whole data pipeline to provide ad hoc analytics on evaluating Lab Workers to correctly identify blood cells through a specific methodology.
  - Whole architecture is hosted on GCP with the final product is delivered through Looker Studio
  - Participants in this quality program are evaluated in two ways: the monthly expert, and an expert consensus to insure an unbiased assessment.
@@ -50,6 +50,7 @@
 - There are great prospects that don't assist to the combine or they do a Pro Day at their campus. That is why names like Derek Stingley Jr, Drake London, Kenny Pickett that the model opts to not draft. The model may have a selection bias due to variable omission.
 - Hyperparameter tuning would be a nice to have within the Pipeline. The model is compiled merely "as-is" from SciKit Learn.
 - We are interested on the players that are marked as drafted but they weren't. We could find a hidden gem on it.
+
 *** 
 
 # [March Madness Kaggle Competition 2022](https://github.com/greg1997-dev/MyPortfolio/blob/main/notebooks/March_Madness.ipynb)
