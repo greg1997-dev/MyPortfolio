@@ -1,4 +1,4 @@
-# Markowitz model in Python
+# Markowitz Model in Python
 
 The Markowitz model, also known as Modern Portfolio Theory (MPT), is a framework for building investment portfolios that optimize returns for a given level of risk. 
 It emphasizes diversification, the idea that by combining assets with different risk profiles, you can reduce overall portfolio risk without sacrificing returns.
