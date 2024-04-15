@@ -88,6 +88,6 @@
 - After an EDA we identified that users without a license we the most likely to not buy an insurance
 - Users with older vehicles were more inclined to buy insurance policies
 - Decision Tree was the best option for classifying users that were prone to buy an insurance policy
-***
+
 
 
