@@ -1,5 +1,4 @@
-# MyPortfolio
-My Data Science Portfolio
+
 
 ***
 # [Markowitz Model for Optimal Portfolio](https://github.com/greg1997-dev/MyPortfolio/blob/main/notebooks/Markowitz.ipynb)
