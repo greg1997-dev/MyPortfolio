@@ -1,4 +1,4 @@
-# Site settings
+
 title: Andres Gregori Portfolio 
 email: data_services@gregory.mx  
 description: Data Science Enthusiast with a passion for using machine learning and data analysis to solve real-world problems. 
@@ -7,7 +7,6 @@ Proven ability to leverage data insights to create effective solutions.
 Experience with a variety of projects including portfolio optimization, sports analytics, sentiment analysis, and insurance risk prediction.
 
 
-# Theme settings
 theme: minima 
 
 
