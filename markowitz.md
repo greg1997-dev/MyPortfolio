@@ -14,5 +14,5 @@ On each iteration I used this strategy on 2022 Reto Actinver.
 ![Efficient Frontier in one Iteration](https://github.com/greg1997-dev/MyPortfolio/blob/5c87424c299a21bbd935bb830ab63008f874ed93/assets/Screenshot%202024-04-15%20at%208.50.40%20AM.png)
 
 ![Portfolio results](https://github.com/greg1997-dev/MyPortfolio/blob/67caf517ba9fd705fec96e1baa37b6623eca57d3/assets/Screenshot%202024-04-15%20at%208.55.31%20AM.png)
-![Portfolio results]()
+![Portfolio results](https://github.com/greg1997-dev/MyPortfolio/blob/1bd7f02c183aa1da67958644ee99aca7e904c5fd/assets/Screenshot%202024-04-15%20at%208.56.04%20AM.png)
 ![Portfolio results]()
