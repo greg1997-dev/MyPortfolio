@@ -10,3 +10,8 @@ In my solution, I proposed to randomly select 9 to 10 assets on the portfolio an
 On each iteration, 100,000 portfolios were generated and an efficient frontier was graphed. 
 The assets used were S&P 500 and Nasdaq 100. 
 On each iteration I used this strategy on 2022 Reto Actinver. 
+[Efficient Frontier in one Iteration]()
+
+[Portfolio results]()
+[Portfolio results]()
+[Portfolio results]()
