@@ -11,7 +11,7 @@ On each iteration, 100,000 portfolios were generated and an efficient frontier w
 The assets used were S&P 500 and Nasdaq 100. 
 On each iteration I used this strategy on 2022 Reto Actinver. 
 
-! [Efficient Frontier in one Iteration](https://github.com/greg1997-dev/MyPortfolio/blob/5c87424c299a21bbd935bb830ab63008f874ed93/assets/Screenshot%202024-04-15%20at%208.50.40%20AM.png)
+![Efficient Frontier in one Iteration](https://github.com/greg1997-dev/MyPortfolio/blob/5c87424c299a21bbd935bb830ab63008f874ed93/assets/Screenshot%202024-04-15%20at%208.50.40%20AM.png)
 
 ![Portfolio results]()
 ![Portfolio results]()
