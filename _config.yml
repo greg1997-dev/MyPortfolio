@@ -9,7 +9,7 @@ description: >
   Experience with a variety of projects including portfolio optimization, sports analytics, sentiment analysis, and insurance risk prediction.
 
 
-theme: minima 
+theme: jekyll-theme-minimal
 markdown: GFM
 
 #plugins:
