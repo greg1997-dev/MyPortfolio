@@ -5,9 +5,9 @@ email: data_services@gregory.mx
 
 description: >
   Leveraging over 5 years of experience in data science and engineering, I am adept at transforming data into actionable insights through effective solutions. 
-  My proficiency in Python libraries like Pandas, Matplotlib, Plotly, Statsmodels, and Scikit-learn allows me to handle data wrangling, visualization, and machine learning model building.  
-  Furthermore, my experience with R programming strengthens my statistical foundation (e.g., Probability and Statistics course).  
-  Throughout my career, I've tackled projects across diverse domains like portfolio optimization (achieving top 3 weekly on Reto Actinver 2022) and insurance risk prediction (identifying key renewal factors with decision trees). 
+  My proficiency in Python libraries like Pandas, Plotly, Statsmodels, and Scikit-learn allows me to handle data wrangling, visualization, and machine learning model building.  
+  Furthermore, my experience with R programming strengthens my statistical foundation. My projects focus mainly in one of my biggest passions which is sports analytics. 
+  I've tackled projects across diverse domains like portfolio optimization (achieving top 3 weekly on Reto Actinver 2022) and NFL Combine (identifying key factors for players to be drafted). 
 
 #logo: /assets/logo.png
 theme: jekyll-theme-minimal
