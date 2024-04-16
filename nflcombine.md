@@ -13,11 +13,11 @@ The only drill that could prove a difference would be the 40-yard dash while the
 
 ## EDA
 
-![Correlation map]()
+![Correlation map](https://storage.googleapis.com/objects-hosted/corr%20map.png)
 At first glance on the variables that were selected, there is no clear correlation on any of the variables for a player to be selected. Being the strongest the 40-yd dash with a 5% correlation.
 Note: the variables were already scaled when the correlation map was developed. 
 
-![Distributions]()
+![Distributions](https://storage.googleapis.com/objects-hosted/continuous%20variables%20combine.png)
 When taking a look at the distributions of times and bench presses, we see there are no clear outliers so we can consider the entire dataset for training. 
 
 ![Positions]()
@@ -36,8 +36,8 @@ Main metrics:
 * ROC_AUC: 61.65%
 * Precision: 70.6%
 * Recall: 60.2%
-![roc_auc]()
-![COnfusion Matrix]()
+![roc_auc](https://storage.googleapis.com/objects-hosted/roc_auc.png)
+![Confusion Matrix](https://storage.googleapis.com/objects-hosted/cm_combine.png)
 ![PrecisionRecall Curve]()
 
 Even though the RF was the best performer when evaluating on the train dataset, turned out to be overfitted. This occurs a lot due to the Random Forest nature. 
