@@ -13,6 +13,18 @@
   * Create a function that created random weights for selecting a 10 stock portfolio randomly
   * Create 100,000 random portfolios 
   * Save the next best portfolio given the return
+ 
+***
+
+# [NFL Combine measurements importance](https://greg1997-dev.github.io/MyPortfolio/nflcombine.html)
+- This project was to try to identify the most important variables for scouts to Draft a Prospect
+- Compared Logistic Regression vs Random Forest Classifier and provide a better example
+- Logit with Lasso Penalty was the best model
+- 40 yd dash time, and Weight are the most important features
+- AUC=0.72
+- Model recommended to draft UDFA such as Jaylen Warren and Cameron Dicker
+- Brock Purdy was a strong recommendation to draft
+
 
 ***
 
@@ -34,17 +46,6 @@
 
 ***
 
-
-# [NFL Combine measurements importance](https://greg1997-dev.github.io/MyPortfolio/nflcombine.html)
-- This project was to try to identify the most important variables for scouts to Draft a Prospect
-- Compared Logistic Regression vs Random Forest Classifier and provide a better example
-- Logit with Lasso Penalty was the best model
-- 40 yd dash time, and Weight are the most important features
-- AUC=0.72
-- Model recommended to draft UDFA such as Jaylen Warren and Cameron Dicker
-- Brock Purdy was a strong recommendation to draft
-
-*** 
 
 # [March Madness Kaggle Competition 2022](https://github.com/greg1997-dev/MyPortfolio/blob/main/notebooks/March_Madness.ipynb)
 
