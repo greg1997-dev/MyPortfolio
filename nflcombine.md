@@ -26,7 +26,7 @@ When taking a look at the distributions of times and bench presses, we see there
 
 
 ### Position Distribution
-![Positions](https://storage.googleapis.com/objects-hosted/newplot%20(2).png)
+![Positions](https://storage.googleapis.com/objects-hosted/newplot%20(3).png)
 WRs are the most common position we can find within prospects for the draft, after that we find CB and RBs on the dataset. 
 After that the most players that are noted are Linemen, whether offensive or defensive.
 
