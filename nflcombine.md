@@ -14,10 +14,12 @@ The only drill that could prove a difference would be the 40-yard dash while the
 ## EDA
 
 ![Correlation map](https://storage.googleapis.com/objects-hosted/corr%20map.png)
+
 At first glance on the variables that were selected, there is no clear correlation on any of the variables for a player to be selected. Being the strongest the 40-yd dash with a 5% correlation.
 Note: the variables were already scaled when the correlation map was developed. 
 
 ![Distributions](https://storage.googleapis.com/objects-hosted/continuous%20variables%20combine.png)
+
 When taking a look at the distributions of times and bench presses, we see there are no clear outliers so we can consider the entire dataset for training. 
 
 ![Positions]()
