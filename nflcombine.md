@@ -64,7 +64,7 @@ Meaning it recommends slightly more as a scout. However, the model is able to id
 On this summary we see that one of the most important variables is the 40 yd. Which is normally the most talked metric on NFL players, whereas variables such as School do not factor much into whether a player is being drafted or not. The other variables are the weight and the vertical jump. Curiously they work inversely. In a sport like Football one would think that bigger players are prone to be selected. In this case we see that weight works inversely for being drafted. 
 
 
-
+[Back to main page](https://greg1997-dev.github.io/MyPortfolio/)
 
 
 
