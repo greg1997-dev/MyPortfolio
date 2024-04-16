@@ -16,3 +16,6 @@ On each iteration I used this strategy on 2022 Reto Actinver.
 ![Portfolio results](https://storage.googleapis.com/objects-hosted/Screenshot%202024-04-15%20at%208.55.31%20AM.png)
 ![Portfolio results](https://storage.googleapis.com/objects-hosted/Screenshot%202024-04-15%20at%208.56.04%20AM.png)
 ![Portfolio results](https://storage.googleapis.com/objects-hosted/Screenshot%202024-04-15%20at%208.56.39%20AM.png)
+
+
+[Back to main page](https://greg1997-dev.github.io/MyPortfolio/)
