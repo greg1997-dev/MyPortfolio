@@ -1,6 +1,6 @@
 ***
 
-# [Markowitz Model for Optimal Portfolio](https://github.com/greg1997-dev/MyPortfolio/blob/main/notebooks/Markowitz.ipynb)
+# [Markowitz Model for Optimal Portfolio](https://greg1997-dev.github.io/MyPortfolio/markowitz.html)
 - Multiple weeks sitting at top 3 places on best portfolios on Reto Actinver 2022
 - The methodology was:
   * Download the stock prices with the yfinance library
