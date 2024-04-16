@@ -38,17 +38,11 @@
 # [NFL Combine measurements importance](https://github.com/greg1997-dev/MyPortfolio/blob/main/notebooks/NFL_Combine.ipynb)
 - This project was to try to identify the most important variables for scouts to Draft a Prospect
 - Compared Logistic Regression vs Random Forest Classifier and provide a better example
-- Random Forest Classifier with high recall
-- RFC with 700 trees
-- School from which the prospect comes, 40 yd dash time, and Weight are the most important features
-- AUC=0.82
-
-## Next Steps on NFL Combine Model
-
-- We are using merely the Combine to determine if we draft a player or not, further data is required.
-- There are great prospects that don't assist to the combine or they do a Pro Day at their campus. That is why names like Derek Stingley Jr, Drake London, Kenny Pickett that the model opts to not draft. The model may have a selection bias due to variable omission.
-- Hyperparameter tuning would be a nice to have within the Pipeline. The model is compiled merely "as-is" from SciKit Learn.
-- We are interested on the players that are marked as drafted but they weren't. We could find a hidden gem on it.
+- Logit with Lasso Penalty was the best model
+- 40 yd dash time, and Weight are the most important features
+- AUC=0.72
+- Model recommended to draft UDFA such as Jaylen Warren and Cameron Dicker
+- Brock Purdy was a strong recommendation to draft
 
 *** 
 
