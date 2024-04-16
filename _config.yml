@@ -4,11 +4,10 @@ email: data_services@gregory.mx
 
 
 description: >
-  Data Scientist/Data Engineer with 5 years of experience. Enthusiast for teaching Data Science related subjects such as Probability, Statistics, and Big Data.  
-  Skilled in Python libraries like Pandas, Matplotlib, Plotly, Statsmodels and Scikit-Learn for data manipulation, model building, and visualization. 
-  Also well versed in R Programming Language.
-  Proven ability to leverage data insights to create effective solutions. 
-  Experience with a variety of projects including portfolio optimization, sports analytics, sentiment analysis, and insurance risk prediction.
+  Leveraging over 5 years of experience in data science and engineering, I am adept at transforming data into actionable insights through effective solutions. 
+  My proficiency in Python libraries like Pandas, Matplotlib, Plotly, Statsmodels, and Scikit-learn allows me to handle data wrangling, visualization, and machine learning model building seamlessly.  
+  Furthermore, my experience with R programming strengthens my statistical foundation (e.g., Probability and Statistics course).  
+  Throughout my career, I've tackled projects across diverse domains like portfolio optimization (achieving top 3 weekly on Reto Actinver 2022) and insurance risk prediction (identifying key renewal factors with decision trees). 
 
 #logo: /assets/logo.png
 theme: jekyll-theme-minimal
