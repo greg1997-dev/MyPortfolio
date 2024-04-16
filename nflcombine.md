@@ -42,8 +42,12 @@ Main metrics:
 * ROC_AUC: 61.65%
 * Precision: 70.6%
 * Recall: 60.2%
+
+
 ![roc_auc](https://storage.googleapis.com/objects-hosted/roc_auc.png)
+
 ![Confusion Matrix](https://storage.googleapis.com/objects-hosted/cm_combine.png)
+
 ![PrecisionRecall Curve]()
 
 Even though the RF was the best performer when evaluating on the train dataset, turned out to be overfitted. This occurs a lot due to the Random Forest nature. 
