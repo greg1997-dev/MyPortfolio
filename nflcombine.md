@@ -7,6 +7,9 @@ The core of the Combine is all about measurables.
 Players run the 40-yard dash, vertical jump, and broad jump to demonstrate speed, explosiveness, and agility. 
 They also go through position-specific drills that showcase their technique and ability to perform game-like actions.
 
+![Combine](https://storage.googleapis.com/objects-hosted/combine.jpeg)
+
+
 However, this event doesn't really show the whole picture of a prospect for the NFL. 
 In fact, my main hypothesis was that this specific event proved no impact on whether a CFB player would be selected or not. 
 The only drill that could prove a difference would be the 40-yard dash while the other performance drills are not that important. 
