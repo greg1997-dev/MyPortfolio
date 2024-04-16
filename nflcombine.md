@@ -36,25 +36,32 @@ For the modelling we considered 3 different models and compare which is the best
 * Logit with L1 Penalization
 * Random Forest
 
-The results are presented below. I've only included the final model selected to show the metrics of it. 
-Main metrics: 
-* Score: 60.18%
-* ROC_AUC: 61.65%
-* Precision: 70.6%
-* Recall: 60.2%
-
-
-![roc_auc](https://storage.googleapis.com/objects-hosted/roc_auc.png)
-
-![Confusion Matrix](https://storage.googleapis.com/objects-hosted/cm_combine.png)
-
-![PrecisionRecall Curve]()
-
 Even though the RF was the best performer when evaluating on the train dataset, turned out to be overfitted. This occurs a lot due to the Random Forest nature. 
-On the other side, the L1 Penalization turned out to be the best performer when predicting the 2022 class. Also, a good model would be the one that can identify prospects
-(labeled as 1) without really being drafted, since that player could turn out to be a breakout player that other teams were not interested in. 
+On the other side, the L1 Penalization turned out to be the best performer when predicting the 2022 class. Also, a good model would be the one that can identify prospects (labeled as 1) without really being drafted, since that player could turn out to be a breakout player that other teams were not interested in. 
 On the notable players the model recommends to draft that were not drafted is Cameron Dicker, Kicker for the Los Angeles Chargers and Jaylen Warren, RB for the Pittsburgh Steelers. 
 On the other side, the model recommended to draft Brock Purdy. And the model recommended not to draft Tyler Allegier.
+
+The results are presented below. I've only included the final model selected to show the metrics of it. 
+Main metrics: On test data
+* Score: 72.7%
+* ROC AUC: 78.1%
+* Precision: 72%
+* Recall: 75%
+
+### ROC Curve
+![roc_auc](https://storage.googleapis.com/objects-hosted/roc_auc.png)
+
+We see a really good ROC Curve. Meaning that the model is able to detect TP. 
+Meaning it recommends slightly more as a scout. However, the model is able to identify undrafted players that can be good prospects.
+
+
+### Coefficients
+![Coefficients](https://storage.googleapis.com/objects-hosted/Screenshot%202024-04-16%20at%201.10.50%20PM.png)
+
+On this summary we see that one of the most important variables is the 40 yd. Which is normally the most talked metric on NFL players, whereas variables such as School do not factor much into whether a player is being drafted or not. The other variables are the weight and the vertical jump. Curiously they work inversely. In a sport like Football one would think that bigger players are prone to be selected. In this case we see that weight works inversely for being drafted. 
+
+
+
 
 
 
