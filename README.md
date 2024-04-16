@@ -35,7 +35,7 @@
 ***
 
 
-# [NFL Combine measurements importance](https://github.com/greg1997-dev/MyPortfolio/blob/main/notebooks/NFL_Combine.ipynb)
+# [NFL Combine measurements importance](https://greg1997-dev.github.io/MyPortfolio/nflcombine.html)
 - This project was to try to identify the most important variables for scouts to Draft a Prospect
 - Compared Logistic Regression vs Random Forest Classifier and provide a better example
 - Logit with Lasso Penalty was the best model
