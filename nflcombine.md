@@ -51,6 +51,9 @@ Main metrics: On test data
 * Precision: 72%
 * Recall: 75%
 
+### Variable Selection from Lasso 
+![var selection](https://storage.googleapis.com/objects-hosted/Captura%20de%20pantalla%202024-04-20%20a%20la(s)%2010.09.52%E2%80%AFa.m..png)
+
 ### ROC Curve
 ![roc_auc](https://storage.googleapis.com/objects-hosted/roc_auc.png)
 
@@ -61,7 +64,7 @@ Meaning it recommends slightly more as a scout. However, the model is able to id
 ### Coefficients
 ![Coefficients](https://storage.googleapis.com/objects-hosted/Screenshot%202024-04-16%20at%201.10.50%20PM.png)
 
-On this summary we see that one of the most important variables is the 40 yd. Which is normally the most talked metric on NFL players, whereas variables such as School do not factor much into whether a player is being drafted or not. The other variables are the weight and the vertical jump. Curiously they work inversely. In a sport like Football one would think that bigger players are prone to be selected. In this case we see that weight works inversely for being drafted. 
+On this summary we see that one of the most important variables is the 40 yd. Which is normally the most talked metric on NFL players, whereas variables such as School do not factor much into whether a player is being drafted or not. The other variables are the 3 Cone and the vertical jump. Curiously they work inversely. In a sport like Football one would think that bigger players are prone to be selected. In this case we see that weight works inversely for being drafted. 
 
 
 [Back to main page](https://greg1997-dev.github.io/MyPortfolio/)
