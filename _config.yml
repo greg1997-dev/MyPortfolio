@@ -2,15 +2,17 @@ title: Andres Gregori Portfolio
 author: Andres Gregori
 email: data_services@gregory.mx 
 
+
 description: >
-  Data Science Enthusiast with a passion for using machine learning and data analysis to solve real-world problems. 
-  Skilled in Python libraries like Pandas, Matplotlib, Plotly, Statsmodels and Scikit-Learn for data manipulation, model building, and visualization.
-  Proven ability to leverage data insights to create effective solutions.  
-  Experience with a variety of projects including portfolio optimization, sports analytics, sentiment analysis, and insurance risk prediction.
+  Over 5 years of experience in data science and engineering, I am adept at transforming data into actionable insights through effective solutions. 
+  My proficiency in Python libraries like Pandas, Plotly, Statsmodels, and Scikit-learn for data wrangling, visualization, and machine learning model building.  
+  I have experience with R programming which I use to teach Statistics to my students.
+  I've tackled projects across diverse domains like portfolio optimization (achieving top 3 weekly on Reto Actinver 2022) and NFL Combine (identifying key factors for players to be drafted). 
 
+#logo: /assets/logo.png
+theme: jekyll-theme-minimal
+markdown: GFM
 
-theme: minima 
-
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+#plugins:
+#  - jekyll-feed
+#  - jekyll-seo-tag

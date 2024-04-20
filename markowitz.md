@@ -1,4 +1,4 @@
-# Markowitz model in Python
+# Markowitz Model in Python
 
 The Markowitz model, also known as Modern Portfolio Theory (MPT), is a framework for building investment portfolios that optimize returns for a given level of risk. 
 It emphasizes diversification, the idea that by combining assets with different risk profiles, you can reduce overall portfolio risk without sacrificing returns.
@@ -11,8 +11,11 @@ On each iteration, 100,000 portfolios were generated and an efficient frontier w
 The assets used were S&P 500 and Nasdaq 100. 
 On each iteration I used this strategy on 2022 Reto Actinver. 
 
-![Efficient Frontier in one Iteration](https://github.com/greg1997-dev/MyPortfolio/blob/5c87424c299a21bbd935bb830ab63008f874ed93/assets/Screenshot%202024-04-15%20at%208.50.40%20AM.png)
+![Efficient Frontier in one Iteration](https://storage.googleapis.com/objects-hosted/Screenshot%202024-04-15%20at%208.50.40%20AM.png)
 
-![Portfolio results](https://github.com/greg1997-dev/MyPortfolio/blob/67caf517ba9fd705fec96e1baa37b6623eca57d3/assets/Screenshot%202024-04-15%20at%208.55.31%20AM.png)
-![Portfolio results](https://github.com/greg1997-dev/MyPortfolio/blob/1bd7f02c183aa1da67958644ee99aca7e904c5fd/assets/Screenshot%202024-04-15%20at%208.56.04%20AM.png)
-![Portfolio results](https://github.com/greg1997-dev/MyPortfolio/blob/d081122d62b42a10a0f44574a60e09ea27fb3682/assets/Screenshot%202024-04-15%20at%208.56.39%20AM.png)
+![Portfolio results](https://storage.googleapis.com/objects-hosted/Screenshot%202024-04-15%20at%208.55.31%20AM.png)
+![Portfolio results](https://storage.googleapis.com/objects-hosted/Screenshot%202024-04-15%20at%208.56.04%20AM.png)
+![Portfolio results](https://storage.googleapis.com/objects-hosted/Screenshot%202024-04-15%20at%208.56.39%20AM.png)
+
+
+[Back to main page](https://greg1997-dev.github.io/MyPortfolio/)
