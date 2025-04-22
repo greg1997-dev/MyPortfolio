@@ -57,7 +57,7 @@ based on the rankings and team needs.
     * Continuous Probability Distributions
     * Analysis of Variance
     * Experimental Design
- - **Upcoming term:** On the next term, students will have a reference guide, you can read the [WIP here]().
+ - **Upcoming term:** On the next term, students will have a reference guide, you can read the [WIP here](https://github.com/greg1997-dev/MyPortfolio/blob/main/assets/Prob_and_stats_ref_guide.pdf).
  
 
 ***
