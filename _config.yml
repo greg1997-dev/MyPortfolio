@@ -11,7 +11,11 @@ description: >
 
 #logo: /assets/logo.png
 theme: jekyll-theme-minimal
-markdown: GFM
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  parse_block_html: true
 
 google_analytics: G-0GPW9JTXQE
 
