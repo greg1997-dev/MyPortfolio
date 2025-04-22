@@ -1,7 +1,23 @@
 ***
 
+# Predicting NFL Matches with different ML Models and variables
+- Using publicly available data like scraping tables from Pro Football Reference, Sports History Odds and NFLFastR
+- Training Data of all games since 1999 to predict the 2023 season
+- 72% Accuracy Score
+- Variables referenced in [(Delen,2012)](https://www.researchgate.net/publication/257026772_A_comparative_analysis_of_data_mining_methods_in_predicting_NCAA_bowl_outcomes) were also relevant for our claim.
+- Beats many state-of-the-art algorithms.
+
+
+# MCMC to prove lottery is strictly random or an associate distribution can be found
+- Worked with Mexican Power Balls such as Chispazo and Melate Retro
+- Metropolis-Hastings Algorithm to prove such claim.
+- -146 and -93 log likelihood on simulation distributions with real distribution
+
+
 # [Markowitz Model for Optimal Portfolio](https://greg1997-dev.github.io/MyPortfolio/markowitz.html)
 - Multiple weeks sitting at top 3 places on best portfolios on Reto Actinver 2022
+- 5th Place National Award for Bloomberg Trading Challenge 2024
+- Worked as advisor for stock buying in Trading challenges
 - The methodology was:
   * Download the stock prices with the yfinance library
   * Clean the data and calculate:
