@@ -4,11 +4,11 @@ email: data_services@gregory.mx
 
 
 description: >
-  Over 5 years of experience in data science and engineering, I am adept at transforming data into actionable insights through effective solutions. 
-  My proficiency in Python libraries like Pandas, Plotly, Statsmodels, and Scikit-learn for data wrangling, visualization, and machine learning model building.  
-  I have experience with R programming which I use to teach Statistics to my students.
-  I've tackled projects across diverse domains like portfolio optimization (achieving top 3 weekly on Reto Actinver 2022) and NFL Combine (identifying key factors for players to be drafted). 
-
+ Data Scientist with 5+ years of experience building models and pipelines that bridge academic rigor and real-world impact. 
+  I specialize in statistical inference, machine learning, and optimization — with projects ranging from predicting NFL draft picks 
+  and modeling NCAA brackets, to portfolio optimization and experimental lab evaluations.
+  My toolkit includes Python (Pandas, Scikit-learn, Plotly, Statsmodels), R (for teaching Probability and Statistics), and cloud tools like GCP and Looker Studio.
+  Whether it's identifying undervalued prospects or building AI-powered draft agents, I turn data into decisions.
 #logo: /assets/logo.png
 theme: jekyll-theme-minimal
 markdown: kramdown
