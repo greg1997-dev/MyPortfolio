@@ -40,7 +40,7 @@ The dataset had the following variables:
 
 ## EDA
 
-### Variables Distribution 
+### Check each variable and identify any anomalies
 ![Variables Distr.](https://lh3.googleusercontent.com/d/1EsBs3SJxeoTKWoiCsKGHt7euvPPw0MYP)
 
 When looking at the histograms for all the numerical variables within the
@@ -48,23 +48,23 @@ dataset, we can see that the Height variable has some null data. Since the value
 is less that 5'5'' there is a big chance that data is null and we need to
 evaluate how to work with it.
 
-### Measurments Distribution
+### Taking a look at the measurments distributions
 ![Combine Distributions](https://lh3.googleusercontent.com/d/1tPStScUE3BPWDzWY_dUkm7sPUfn-zccG)
 
+When taking a look at the distributions of times and bench presses, we see there
+are no clear outliers so we can consider the entire dataset for training
+regarding the combine measurements.
 
-### Correlation Map
-![Correlation map](https://storage.googleapis.com/objects-hosted/corr%20map.png)
+
+### How variables relate to each other?
+![Correlation map](https://lh3.googleusercontent.com/d/1juGY12WOWj-DlvBEcIVOBiHAwmniQqQ0)
 
 At first glance on the variables that were selected, there is no clear correlation on any of the variables for a player to be selected. Being the strongest the 40-yd dash with a 5% correlation.
 Note: the variables were already scaled when the correlation map was developed. 
 
-### Identifying Outliers
-![Distributions](https://storage.googleapis.com/objects-hosted/continuous%20variables%20combine.png)
-
-When taking a look at the distributions of times and bench presses, we see there are no clear outliers so we can consider the entire dataset for training. 
 
 
-### Position Distribution
+### How many players have enrolled by position?
 ![Positions](https://lh3.googleusercontent.com/d/1kLWBbhD7PoD_TyPGglXvV_ZPUiYC65ML)
 WRs are the most common position we can find within prospects for the draft, after that we find CB and RBs on the dataset. 
 After that the most players that are noted are Linemen, whether offensive or defensive.
@@ -87,15 +87,19 @@ Main metrics: On test data
 * Precision: 72%
 * Recall: 75%
 
+### Confusion Matrix
+![Confusion Matrix](https://lh3.googleusercontent.com/d/1MwEaP_b2reC_Ai84Ht_0ZlMbdJAdeyaQ)
+
+
 ### ROC Curve
-![roc_auc](https://storage.googleapis.com/objects-hosted/roc_auc.png)
+![roc_auc](https://lh3.googleusercontent.com/d/1y-rUO8SKvrir4aP8u7WzDWghDRPyq0yp)
 
 We see a really good ROC Curve. Meaning that the model is able to detect TP. 
 Meaning it recommends slightly more as a scout. However, the model is able to identify undrafted players that can be good prospects.
 
 
 ### Coefficients
-![Coefficients](https://storage.googleapis.com/objects-hosted/Screenshot%202024-04-16%20at%201.10.50%20PM.png)
+![Coefficients](https://lh3.googleusercontent.com/d/1N_GJILMz9e0Cr3CGf1EvwlDOh59tGxPh)
 
 On this summary we see that one of the most important variables is the 40 yd. Which is normally the most talked metric on NFL players, whereas variables such as School do not factor much into whether a player is being drafted or not. The other variables are the weight and the vertical jump. Curiously they work inversely. In a sport like Football one would think that bigger players are prone to be selected. In this case we see that weight works inversely for being drafted. 
 

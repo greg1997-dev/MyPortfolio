@@ -4,6 +4,9 @@ title: Andrés Gregori Portfolio
 ---
 
 # 📈 [Markowitz Model for Optimal Portfolio](https://greg1997-dev.github.io/MyPortfolio/markowitz.html)
+**Objective:** To develop a model that helped on trading challenges to select the
+optimal portfolio each week to get the best profits in a return-risk trade-off.
+
 - Multiple weeks sitting at top 3 places on best portfolios on Reto Actinver 2022.
 - 5th Place National Award for Bloomberg Trading Challenge 2024.
 - Worked as advisor for stock buying in Trading challenges.
@@ -23,6 +26,9 @@ title: Andrés Gregori Portfolio
 ***
 
 # 🏈 [NFL Combine measurements importance](https://greg1997-dev.github.io/MyPortfolio/nflcombine.html)
+**Objective:** Identify players that by their measurments at the combine would
+be recommended to draft but weren't drafted. With this I tried to look for
+hidden talent.
 - This project was to try to identify the most important variables for scouts to
 Draft a Prospect.
 - Developed hypothesis on comparing positions and their distributions.
@@ -68,7 +74,8 @@ based on the rankings and team needs.
 Sports History Odds and NFLFastR
 - Training Data of all games since 1999 to predict the 2023 season
 - 72% Accuracy Score
-- Variables referenced in [(Delen,2012)](https://www.researchgate.net/publication/257026772_A_comparative_analysis_of_data_mining_methods_in_predicting_NCAA_bowl_outcomes) were also relevant for our claim.
+- Variables referenced in [(Delen,2012)](https://www.researchgate.net/publication/257026772_A_comparative_analysis_of_data_mining_methods_in_predicting_NCAA_bowl_outcomes)
+were also relevant for our claim.
 - Beats many state-of-the-art algorithms regarding prediction of games.
 
 ***
