@@ -1,3 +1,8 @@
+---
+layout: default
+title: Andrés Gregori Portfolio
+---
+
 # 📈 [Markowitz Model for Optimal Portfolio](https://greg1997-dev.github.io/MyPortfolio/markowitz.html)
 - Multiple weeks sitting at top 3 places on best portfolios on Reto Actinver 2022.
 - 5th Place National Award for Bloomberg Trading Challenge 2024.
@@ -138,8 +143,10 @@ an insurance policy
 
 If you'd like to chat or collaborate, feel free to book a time with me:
 
-<iframe src="https://calendly.com/andrew-gregory-a_pb/30min" 
-        width="100%" height="700" frameborder="0">
-</iframe>
+<div style="min-width:320px;height:700px;">
+  <iframe src="https://calendly.com/andrew-gregory-a_pb/30min" 
+          width="100%" height="100%" frameborder="0" scrolling="no">
+  </iframe>
+</div>
 
 
