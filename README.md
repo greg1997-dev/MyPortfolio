@@ -138,7 +138,8 @@ an insurance policy
 
 If you'd like to chat or collaborate, feel free to book a time with me:
 
-<div class="calendly-inline-widget" data-url="https://calendly.com/andrew-gregory-a_pb/30min" style="min-width:320px;height:700px;"></div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<iframe src="https://calendly.com/andrew-gregory-a_pb/30min" 
+        width="100%" height="700" frameborder="0">
+</iframe>
 
 
