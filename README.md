@@ -1,3 +1,63 @@
+# 📈 [Markowitz Model for Optimal Portfolio](https://greg1997-dev.github.io/MyPortfolio/markowitz.html)
+- Multiple weeks sitting at top 3 places on best portfolios on Reto Actinver 2022.
+- 5th Place National Award for Bloomberg Trading Challenge 2024.
+- Worked as advisor for stock buying in Trading challenges.
+- The methodology was:
+  * Download the stock prices with the yfinance library
+  * Clean the data and calculate:
+    * Mean Returns
+    * Log Returns
+    * Portfolio Risk
+    * Portfolio Returns
+    * Sharpe Ratio
+  * Create a function that created random weights for selecting a 10 stock 
+  portfolio randomly.
+  * Create 100,000 random portfolios.
+  * Save the next best portfolio given the return.
+ 
+***
+
+# 🏈 [NFL Combine measurements importance](https://greg1997-dev.github.io/MyPortfolio/nflcombine.html)
+- This project was to try to identify the most important variables for scouts to
+Draft a Prospect.
+- Developed hypothesis on comparing positions and their distributions.
+- There is a statistical difference between positions on their Combine
+measurements.
+- Compared Logistic Regression vs Random Forest Classifier and provide a better 
+example.
+- Logit with Lasso Penalty was the best model.
+- 40 yd dash time, and Weight are the most important features.
+- AUC=0.72
+- Model recommended to draft UDFA such as Jaylen Warren and Cameron Dicker.
+- Brock Purdy was a strong recommendation to draft.
+
+
+***
+
+# 📑 Retrieval Augmented Generation (RAG) and Agent with GeminiAPI for Drafting players in the NFL
+- As part of the [Gen AI Intensive Course Capstone 2025Q1](https://www.kaggle.com/competitions/gen-ai-intensive-course-capstone-2025q1)
+- Developed an LLM with a RAG to be trained on all the publicly available scouting reports regarding the 2025 NFL Draft.
+- LLM able to give an assesment as well as compare and contrast players of the same position.
+- Added an Agent that was capable of playing a mock draft with the user and make picks from the big board
+based on the rankings and team needs.
+
+***
+
+
+# 🎲 [Probability and Statistics Course at Universidad Panamericana](https://github.com/greg1997-dev/Prob_and_Stats)
+ - Leveraging the R programming language, students were able to have a deeper 
+ understanding of Probability and Statistics concepts such as:
+    * Conditional Probability
+    * Discrete Probability Distributions
+    * Continuous Probability Distributions
+    * Analysis of Variance
+    * Experimental Design
+ - **Upcoming term:** On the next term, students will have a reference guide, you can read the [WIP here]().
+ 
+
+***
+
+
 # Predicting NFL Matches with different ML Models and variables
 - Using publicly available data like scraping tables from Pro Football Reference,
 Sports History Odds and NFLFastR
@@ -17,58 +77,8 @@ distribution of contests.
 
 ***
 
-# [Markowitz Model for Optimal Portfolio](https://greg1997-dev.github.io/MyPortfolio/markowitz.html)
-- Multiple weeks sitting at top 3 places on best portfolios on Reto Actinver 
-2022.
-- 5th Place National Award for Bloomberg Trading Challenge 2024.
-- Worked as advisor for stock buying in Trading challenges.
-- The methodology was:
-  * Download the stock prices with the yfinance library
-  * Clean the data and calculate:
-    * Mean Returns
-    * Log Returns
-    * Portfolio Risk
-    * Portfolio Returns
-    * Sharpe Ratio
-  * Create a function that created random weights for selecting a 10 stock 
-  portfolio randomly.
-  * Create 100,000 random portfolios.
-  * Save the next best portfolio given the return.
- 
-***
 
-# [NFL Combine measurements importance](https://greg1997-dev.github.io/MyPortfolio/nflcombine.html)
-- This project was to try to identify the most important variables for scouts to
-Draft a Prospect.
-- Developed hypothesis on comparing positions and their distributions.
-- There is a statistical difference between positions on their Combine
-measurements.
-- Compared Logistic Regression vs Random Forest Classifier and provide a better 
-example.
-- Logit with Lasso Penalty was the best model.
-- 40 yd dash time, and Weight are the most important features.
-- AUC=0.72
-- Model recommended to draft UDFA such as Jaylen Warren and Cameron Dicker.
-- Brock Purdy was a strong recommendation to draft.
-
-
-***
-
-# [Probability and Statistics Course at Universidad Panamericana](https://github.com/greg1997-dev/Prob_and_Stats)
- - Leveraging the R programming language, students were able to have a deeper 
- understanding of Probability and Statistics concepts such as:
- * Conditional Probability
- * Discrete Probability Distributions
- * Continuous Probability Distributions
- * Analysis of Variance
- * Experimental Design
- - **Upcoming term:** On the next term, students will have a reference guide,
- 
-
-***
-
-
-# [Sankey Report for Laboratory](https://storage.googleapis.com/objects-hosted/Screenshot%202024-03-13%20at%2012.00.24%20PM.png)
+# 📊 [Sankey Report for Laboratory](https://storage.googleapis.com/objects-hosted/Screenshot%202024-03-13%20at%2012.00.24%20PM.png)
  - Developed an end-to-end data pipeline to provide ad hoc analytics on 
  evaluating Lab Workers to correctly identify blood cells through a specific
  methodology.
@@ -80,7 +90,7 @@ example.
 ***
 
 
-# [March Madness Kaggle Competition 2022](https://github.com/greg1997-dev/MyPortfolio/blob/main/notebooks/March_Madness.ipynb)
+# 🏀 [March Madness Kaggle Competition 2022](https://github.com/greg1997-dev/MyPortfolio/blob/main/notebooks/March_Madness.ipynb)
 
 - This project was used in the
 [March Machine Learning Mania 2022 - Men’s](https://www.kaggle.com/competitions/mens-march-mania-2022/overview) competition to predict the bracket
@@ -103,7 +113,7 @@ Purdue
 - Classified possitive topics into 10 different categories based on their sentiment score
 ***
 
-# [Titanic Kaggle Competition](https://github.com/greg1997-dev/Titanic_Kaggle_Competition/blob/main/notebooks/Titanic_Kaggle_Competition.ipynb)
+# 🚢 [Titanic Kaggle Competition](https://github.com/greg1997-dev/Titanic_Kaggle_Competition/blob/main/notebooks/Titanic_Kaggle_Competition.ipynb)
 
 - The most recommended Kaggle competition to get your hands on ML
 - Voter Classifier that included distinct methodologies
@@ -113,7 +123,7 @@ Purdue
 
 ***
 
-# [Insurance Project](https://github.com/greg1997-dev/MyPortfolio/blob/main/notebooks/Proyecto_Seguros.ipynb)
+# 🚗 [Insurance Project](https://github.com/greg1997-dev/MyPortfolio/blob/main/notebooks/Proyecto_Seguros.ipynb)
 
 - Analyzed a Dataset and predict if a user would renew its insurance policy or
 not
@@ -123,5 +133,12 @@ not buy an insurance
 - Decision Tree was the best option for classifying users that were prone to buy
 an insurance policy
 
+
+# 📅 Schedule a Call
+
+If you'd like to chat or collaborate, feel free to book a time with me:
+
+<div class="calendly-inline-widget" data-url="https://calendly.com/andrew-gregory-a_pb/30min" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
 
