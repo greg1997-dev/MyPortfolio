@@ -7,14 +7,50 @@ The core of the Combine is all about measurables.
 Players run the 40-yard dash, vertical jump, and broad jump to demonstrate speed, explosiveness, and agility. 
 They also go through position-specific drills that showcase their technique and ability to perform game-like actions.
 
-![Combine](https://storage.googleapis.com/objects-hosted/combine.jpeg)
+![Combine](https://lh3.googleusercontent.com/d/1c4XlbRhlZLzuKqahtfBtU27bRdp2sgv6)
 
 
-However, this event doesn't really show the whole picture of a prospect for the NFL. 
-In fact, my main hypothesis was that this specific event proved no impact on whether a CFB player would be selected or not. 
-The only drill that could prove a difference would be the 40-yard dash while the other performance drills are not that important. 
+However, this event doesn't really show the whole picture of a prospect for the
+NFL. 
+In fact, my main hypothesis was that this specific event proved no impact on
+whether a CFB player would be selected or not. 
+The only drill that could prove a difference would be the 40-yard dash while
+the other performance drills are not that important. 
+
+## Variables 
+The dataset had the following variables:
+
+| Column              | Description                                       | Type   |
+|---------------------|---------------------------------------------------|--------|
+| Player              | Player name                                       | string |
+| Pos                 | The position of the player                        | string |
+| School              | Player's high school or preparatory school       | string |
+| College             | College the player attended at time of combine   | string |
+| Ht                  | Height of the player (in feet-inches, e.g., 6-1) | double |
+| Wt                  | Weight of the player (in pounds)                 | double |
+| 40yd                | Time in seconds for the 40-yard dash             | double |
+| Vertical            | Vertical jump height (in inches)                 | double |
+| Bench               | Number of 225 lb bench press reps                | int    |
+| Broad Jump          | Distance of broad jump (in inches)               | double |
+| 3Cone               | Time in seconds for 3-cone drill                 | double |
+| Shuttle             | Time in seconds for 20-yard shuttle              | double |
+| Drafted (tm/rnd/yr) | Team, round, and year player was drafted         | string |
+
+
 
 ## EDA
+
+### Variables Distribution 
+![Variables Distr.](https://lh3.googleusercontent.com/d/1EsBs3SJxeoTKWoiCsKGHt7euvPPw0MYP)
+
+When looking at the histograms for all the numerical variables within the
+dataset, we can see that the Height variable has some null data. Since the value
+is less that 5'5'' there is a big chance that data is null and we need to
+evaluate how to work with it.
+
+### Measurments Distribution
+![Combine Distributions](https://lh3.googleusercontent.com/d/1tPStScUE3BPWDzWY_dUkm7sPUfn-zccG)
+
 
 ### Correlation Map
 ![Correlation map](https://storage.googleapis.com/objects-hosted/corr%20map.png)
@@ -29,7 +65,7 @@ When taking a look at the distributions of times and bench presses, we see there
 
 
 ### Position Distribution
-![Positions](https://storage.googleapis.com/objects-hosted/newplot%20(3).png)
+![Positions](https://lh3.googleusercontent.com/d/1kLWBbhD7PoD_TyPGglXvV_ZPUiYC65ML)
 WRs are the most common position we can find within prospects for the draft, after that we find CB and RBs on the dataset. 
 After that the most players that are noted are Linemen, whether offensive or defensive.
 
