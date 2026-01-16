@@ -51,7 +51,7 @@ STAPLE_LIST = [
     "Zombie World [ID: 40642515]"
 ]
 
-### DB Connectin
+### DB Connection
 CHROMA_PATH = "./yugioh_db"
 
 @st.cache_resource
@@ -59,10 +59,10 @@ def get_chroma_client():
     return chromadb.PersistentClient(path=CHROMA_PATH)
 
 client_db = get_chroma_client()
-# Make sure "ygo_cards" matches the name you gave your collection when you created it
+
 collection = client_db.get_collection(name="ygo_cards") 
 
-# --- STEP 3: UI & LLM LOGIC ---
+# UI & LLM LOGIC
 st.title("Deck Doctor RAG")
 
 api_key = st.sidebar.text_input("Gemini API Key", type="password")
@@ -81,7 +81,7 @@ if api_key:
                 n_results=15 
             )
 
-            # 2. DATA PREP (Now safely inside the button block)
+            # 2. DATA PREP
             retrieved_knowledge = "\n".join(results['documents'][0])
             
             # 3. PROMPT GENERATION
