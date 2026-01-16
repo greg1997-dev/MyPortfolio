@@ -1,0 +1,5 @@
+google-genai
+streamlit
+chromadb
+pysqlite3-binary
+numpy
