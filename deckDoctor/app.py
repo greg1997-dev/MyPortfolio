@@ -7,6 +7,7 @@ import streamlit as st
 import chromadb
 import re
 from google import genai
+import os
 
 
 STAPLE_LIST = [
@@ -51,8 +52,8 @@ STAPLE_LIST = [
     "Zombie World [ID: 40642515]"
 ]
 
-### DB Connection
-CHROMA_PATH = "./yugioh_db"
+base_path = os.path.dirname(os.path.abspath(__file__))
+CHROMA_PATH = os.path.join(base_path, "yugioh_db")
 
 @st.cache_resource
 def get_chroma_client():
