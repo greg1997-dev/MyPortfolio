@@ -60,7 +60,7 @@ def get_chroma_client():
 
 client_db = get_chroma_client()
 
-collection = client_db.get_collection(name="ygo_cards") 
+collection = client_db.get_collection(name="yugioh_master_collection") 
 
 # UI & LLM LOGIC
 st.title("Deck Doctor RAG")
