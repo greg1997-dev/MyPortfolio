@@ -11,45 +11,33 @@ import os
 
 
 STAPLE_LIST = [
-    "Accesscode Talker [ID: 86066372]", "Anti-Spell Fragrance [ID: 58921041]", 
-    "Artifact Lancea [ID: 34267776]", "Ash Blossom & Joyous Spring [ID: 14558127]", 
-    "Beyond the Pendulum [ID: 71203602]", "Book of Moon [ID: 14087893]", 
-    "Bystial Druiswurm [ID: 61019661]", "Bystial Magnamhut [ID: 14138100]", 
-    "Called by the Grave [ID: 24224830]", "Change of Heart [ID: 04031928]", 
-    "Chaos Angel [ID: 61405143]", "Cosmic Cyclone [ID: 82671409]", 
-    "Crossout Designator [ID: 65681983]", "D.D. Crow [ID: 24508238]", 
-    "Dark Hole [ID: 53129443]", "Dark Ruler No More [ID: 90307480]", 
-    "Destructive Daruma Karma Cannon [ID: 46153721]", "Dimension Shifter [ID: 91800273]", 
-    "Dimensional Fissure [ID: 81674782]", "Dinowrestler Pankratops [ID: 05501009]", 
-    "Divine Arsenal AA-ZEUS - Sky Thunder [ID: 90448239]", "Dogmatika Punishment [ID: 35735125]", 
-    "Dominus Impulse [ID: 82570001]", "Droll & Lock Bird [ID: 09414502]", 
-    "Effect Veiler [ID: 97268402]", "Elder Entity N'tss [ID: 10389147]", 
-    "Emergency Teleport [ID: 67723438]", "Enemy Controller [ID: 98139714]", 
-    "Evenly Matched [ID: 15693423]", "Exceed the Pendulum [ID: 38851775]", 
-    "Fantastical Dragon Phantazmay [ID: 98630720]", "Foolish Burial [ID: 81439173]", 
-    "Foolish Burial Goods [ID: 28546905]", "Forbidden Chalice [ID: 25773167]", 
-    "Forbidden Droplet [ID: 24299458]", "Garura, Wings of Resonant Life [ID: 11759235]", 
-    "Ghost Belle & Haunted Mansion [ID: 73642296]", "Ghost Mourner & Moonlit Chill [ID: 52038441]", 
-    "Ghost Ogre & Snow Rabbit [ID: 59438930]", "Gozen Match [ID: 53334471]", 
-    "Gold Sarcophagus [ID: 75347539]", "Harpie's Feather Duster [ID: 18144506]", 
-    "I:P Masquerena [ID: 65741786]", "Infinite Impermanence [ID: 10045474]", 
-    "Instant Fusion [ID: 18452019]", "Kashtira Fenrir [ID: 32909498]", 
-    "Knightmare Phoenix [ID: 02857333]", "Knightmare Unicorn [ID: 38342335]", 
-    "Kurikara Divincarnate [ID: 45730592]", "Lava Golem [ID: 00102380]", 
-    "Lightning Storm [ID: 14532163]", "Lost Wind [ID: 73488214]", 
-    "Macro Cosmos [ID: 30243636]", "Monster Reborn [ID: 83764718]", 
-    "Mudragon of the Swamp [ID: 40838625]", "Mulcharmy Fuwalos [ID: 26057213]", 
-    "Mulcharmy Purulia [ID: 46845311]", "Necrovalley [ID: 47355498]", 
-    "One for One [ID: 69931927]", "Pot of Avarice [ID: 55144522]", 
-    "Pot of Desires [ID: 35261759]", "Pot of Duality [ID: 98645731]", 
-    "Raigeki [ID: 12580477]", "Reinforcement of the Army [ID: 32807846]", 
-    "Rivalry of Warlords [ID: 90840767]", "S:P Little Knight [ID: 29301450]", 
-    "Salamangreat Almiraj [ID: 60303248]", "Set Rotation [ID: 58891075]", 
-    "Skill Drain [ID: 82732705]", "Super Starslayer TY-PHON - Sky Crisis [ID: 36563630]", 
-    "There Can Be Only One [ID: 61740673]", "Titanocider [ID: 15305141]", 
-    "Torrential Tribute [ID: 53582587]", "Trap Trick [ID: 75434466]", 
-    "Underworld Goddess of the Closed World [ID: 98127546]", "Upstart Goblin [ID: 70368879]", 
-    "Zombie World [ID: 40642515]"
+    "Accesscode Talker", "Anti-Spell Fragrance", "Artifact Lancea",
+    "Ash Blossom & Joyous Spring", "Beyond the Pendulum", "Book of Moon",
+    "Bystial Druiswurm", "Bystial Magnamhut", "Called by the Grave",
+    "Change of Heart", "Chaos Angel", "Cosmic Cyclone",
+    "Crossout Designator", "D.D. Crow", "Dark Hole",
+    "Dark Ruler No More", "Destructive Daruma Karma Cannon",
+    "Dimension Shifter", "Dimensional Fissure", "Dinowrestler Pankratops",
+    "Divine Arsenal AA-ZEUS - Sky Thunder", "Dogmatika Punishment",
+    "Dominus Impulse", "Droll & Lock Bird", "Effect Veiler",
+    "Elder Entity N'tss", "Emergency Teleport", "Enemy Controller",
+    "Evenly Matched", "Exceed the Pendulum", "Fantastical Dragon Phantazmay",
+    "Foolish Burial", "Foolish Burial Goods", "Forbidden Chalice",
+    "Forbidden Droplet", "Garura, Wings of Resonant Life",
+    "Ghost Belle & Haunted Mansion", "Ghost Mourner & Moonlit Chill",
+    "Ghost Ogre & Snow Rabbit", "Gozen Match", "Gold Sarcophagus",
+    "Harpie's Feather Duster", "I:P Masquerena", "Infinite Impermanence",
+    "Instant Fusion", "Kashtira Fenrir", "Knightmare Phoenix",
+    "Knightmare Unicorn", "Kurikara Divincarnate", "Lava Golem",
+    "Lightning Storm", "Lost Wind", "Macro Cosmos", "Monster Reborn",
+    "Mudragon of the Swamp", "Mulcharmy Fuwalos", "Mulcharmy Purulia",
+    "Necrovalley", "One for One", "Pot of Avarice", "Pot of Desires",
+    "Pot of Duality", "Raigeki", "Reinforcement of the Army",
+    "Rivalry of Warlords", "S:P Little Knight", "Salamangreat Almiraj",
+    "Set Rotation", "Skill Drain", "Super Starslayer TY-PHON - Sky Crisis",
+    "There Can Be Only One", "Titanocider", "Torrential Tribute",
+    "Trap Trick", "Underworld Goddess of the Closed World",
+    "Upstart Goblin", "Zombie World"
 ]
 
 base_path = os.path.dirname(os.path.abspath(__file__))
@@ -104,7 +92,7 @@ if api_key:
                 7. For every card, include its [ID: ########].
             """
             
-            response = genai_client.models.generate_content(model="gemini-2.0-flash", contents=prompt)
+            response = genai_client.models.generate_content(model="gemini-3.1-flash-lite-preview", contents=prompt)
             
             # 4. DISPLAY
             st.markdown(response.text)
