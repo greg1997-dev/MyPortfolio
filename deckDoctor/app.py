@@ -1,4 +1,3 @@
-# --- STEP 1: FIX SQLITE FOR STREAMLIT CLOUD ---
 __import__('pysqlite3')
 import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
@@ -43,6 +42,18 @@ STAPLE_LIST = [
 base_path = os.path.dirname(os.path.abspath(__file__))
 CHROMA_PATH = os.path.join(base_path, "yugioh_db")
 
+def get_card_id(card_name):
+    """Fetch card ID from YGOPRODeck API"""
+    try:
+        url = f"https://db.ygoprodeck.com/api/v7/cardinfo.php?name={card_name}"
+        response = requests.get(url, timeout=5)
+        if response.status_code == 200:
+            data = response.json()
+            return data['data'][0]['id']
+    except:
+        pass
+    return None
+
 @st.cache_resource
 def get_chroma_client():
     return chromadb.PersistentClient(path=CHROMA_PATH)
@@ -64,10 +75,10 @@ if api_key:
     if st.button("Generate Deck"):
         with st.spinner("Searching database and consulting AI..."):
             # 1. RAG SEARCH
-            search_query = f"Competitive {archetype} deck lists using {engine_context} for 2026 meta, retrieve the card ID for each result."
+            search_query = f"Competitive {archetype} deck lists using {engine_context} for 2026 meta."
             results = collection.query(
                 query_texts=[search_query],
-                n_results=22 
+                n_results=56
             )
 
             # 2. DATA PREP
@@ -99,8 +110,16 @@ if api_key:
             
             # 5. SIDEBAR IMAGES
             st.sidebar.header("Visual Decklist")
+            card_names = re.findall(r'\*\*(.+?)\*\*|\n- (.+?)\n|^- (.+?)$', response.text, re.MULTILINE)
+            card_names = [name for match in card_names for name in match if name]
+            card_names = list(set(card_names))  # Remove duplicates
             ids = list(set(re.findall(r"\[ID: (\d+)\]", response.text)))
             for card_id in ids:
-                st.sidebar.image(f"https://images.ygoprodeck.com/images/cards/{card_id}.jpg", caption=f"ID: {card_id}")
+                card_id = get_card_id(card_name.strip())
+                if card_id:
+                    st.sidebar.image(
+                        f"https://images.ygoprodeck.com/images/cards/{card_id}.jpg", 
+                        caption=card_name
+                    )
 else:
     st.info("Please enter your Gemini API key in the sidebar to begin.")
