@@ -101,6 +101,7 @@ if api_key:
                 4. Identify the core 25-30 cards.
                 5. Fill the remaining slots with STAPLE OPTIONS.
                 6. List potential weaknesses and propose a 15 card side deck with cards that can compliment the deck or be substitutes for cards in case they're facing a certain archetype.
+                7. List the amount of cards needed and the exact name of the card only, example: 3x Blue-Eyes White Dragon
             """
             
             response = genai_client.models.generate_content(model="gemini-3.1-flash-lite-preview", contents=prompt)
@@ -114,9 +115,7 @@ if api_key:
             for card_name in card_names:
                 card_id = get_card_id(card_name.strip())
                 if card_id:
-                    st.sidebar.image(
-                        f"https://images.ygoprodeck.com/images/cards/{card_id}.jpg",
-                        caption=card_name
-                        )
+                    st.sidebar.image(f"https://images.ygoprodeck.com/images/cards/{card_id}.jpg",caption=card_name)
+                    #st.sidebar.image(f"https://images.ygoprodeck.com/images/cards/{card_id}.jpg", caption=f"ID: {card_id}")
 else:
     st.info("Please enter your Gemini API key in the sidebar to begin.")
