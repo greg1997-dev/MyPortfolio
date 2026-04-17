@@ -3,4 +3,4 @@ streamlit
 chromadb
 pysqlite3-binary
 numpy
-protobuf<4.0.0
+protobuf==3.20.3
