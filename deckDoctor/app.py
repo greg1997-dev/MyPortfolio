@@ -111,8 +111,8 @@ if api_key:
             
             # 5. SIDEBAR IMAGES
             st.sidebar.header("Visual Decklist")
-            extracted_names = re.findall(r'\d+x\s+([a-zA-Z0-9\s\'\-\&\:\,\!\.]+)', response.text)
-            card_names = sorted(list(set([name.strip() for name in extracted_names])))
+            extracted = re.findall(r'\d+x\s+(.+?)(?=\n|$)', response.text)
+            card_names = list(set([name.strip() for name in extracted]))
             st.write(f"Found cards: {card_names}")
             for card_name in card_names:
                 card_id = get_card_id(card_name.strip())
