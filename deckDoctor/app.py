@@ -64,10 +64,10 @@ if api_key:
     if st.button("Generate Deck"):
         with st.spinner("Searching database and consulting AI..."):
             # 1. RAG SEARCH
-            search_query = f"Competitive {archetype} deck lists using {engine_context} for 2026 meta"
+            search_query = f"Competitive {archetype} deck lists using {engine_context} for 2026 meta, retrieve the card ID for each result."
             results = collection.query(
                 query_texts=[search_query],
-                n_results=15 
+                n_results=22 
             )
 
             # 2. DATA PREP
