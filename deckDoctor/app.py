@@ -108,50 +108,16 @@ if api_key:
             
             # 4. DISPLAY
             st.markdown(response.text)
-            st.divider()
-            st.header("Visual Deck Gallery")
-
-
-            extracted = re.findall(r'\d+x\s+(.+?)(?=\n|$)', response.text)
-            card_names = list(set([name.strip() for name in extracted]))
-
-# 2. Filter out junk and generic text
-            valid_cards = []
-            for name in card_names:
-                clean_name = re.sub(r'[\*\(\)\[\]]', '', name).split('(')[0].strip()
-                if not any(word in clean_name.lower() for word in ["various", "utility", "slots", "rank"]):
-                    valid_cards.append(clean_name)
-
-# 3. Create the Grid (5 columns per row)
-            cols_per_row = 5
-            for i in range(0, len(valid_cards), cols_per_row):
-                cols = st.columns(cols_per_row)
-    # Get the slice of cards for this specific row
-                batch = valid_cards[i : i + cols_per_row]
-    
-            for idx, card_name in enumerate(batch):
-                card_id = get_card_id(card_name)
-                if card_id:
-                    with cols[idx]:
-                        st.image(
-                    f"https://images.ygoprodeck.com/images/cards/{card_id}.jpg",
-                    caption=card_name,
-                    use_container_width=True
-                )
             
             # 5. SIDEBAR IMAGES
-            #st.sidebar.header("Visual Decklist")
-            #extracted = re.findall(r'\d+x\s+(.+?)(?=\n|$)', response.text)
-            #card_names = list(set([name.strip() for name in extracted]))
-            #st.write(f"Found cards: {card_names}")
-            #for card_name in card_names:
-            #    card_id = get_card_id(card_name.strip())
-            #    if card_id:
-            #        st.sidebar.image(f"https://images.ygoprodeck.com/images/cards/{card_id}.jpg",caption=card_name)
+            st.sidebar.header("Visual Decklist")
+            extracted = re.findall(r'\d+x\s+(.+?)(?=\n|$)', response.text)
+            card_names = list(set([name.strip() for name in extracted]))
+            st.write(f"Found cards: {card_names}")
+            for card_name in card_names:
+                card_id = get_card_id(card_name.strip())
+                if card_id:
+                    st.sidebar.image(f"https://images.ygoprodeck.com/images/cards/{card_id}.jpg",caption=card_name)
                     #st.sidebar.image(f"https://images.ygoprodeck.com/images/cards/{card_id}.jpg", caption=f"ID: {card_id}")
-
-
-
-
 else:
     st.info("Please enter your Gemini API key in the sidebar to begin.")
