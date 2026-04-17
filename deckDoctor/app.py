@@ -7,6 +7,7 @@ import chromadb
 import re
 from google import genai
 import os
+import requests
 
 
 STAPLE_LIST = [
@@ -113,12 +114,12 @@ if api_key:
             card_names = [name for match in card_names for name in match if name]
             card_names = list(set(card_names))  # Remove duplicates
             ids = list(set(re.findall(r"\[ID: (\d+)\]", response.text)))
-            for card_id in ids:
+            for card_name in card_names:
                 card_id = get_card_id(card_name.strip())
                 if card_id:
                     st.sidebar.image(
-                        f"https://images.ygoprodeck.com/images/cards/{card_id}.jpg", 
+                        f"https://images.ygoprodeck.com/images/cards/{card_id}.jpg",
                         caption=card_name
-                    )
+                        )
 else:
     st.info("Please enter your Gemini API key in the sidebar to begin.")
