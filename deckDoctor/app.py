@@ -52,7 +52,7 @@ def get_card_id(card_name):
             data = response.json()
             return data['data'][0]['id']
     except:
-        pass
+        return 89631139
     return None
 
 @st.cache_resource
@@ -110,10 +110,7 @@ if api_key:
             
             # 5. SIDEBAR IMAGES
             st.sidebar.header("Visual Decklist")
-            card_names = re.findall(r'\d+x\s+([^\[\n]+?)(?:\s*\[|$)', response.text)
-            card_names = [name for match in card_names for name in match if name]
-            card_names = list(set(card_names))  # Remove duplicates
-            ids = list(set(re.findall(r"\[ID: (\d+)\]", response.text)))
+            card_names = list(set(re.findall(r'\d+x\s+([^\[\n]+?)(?:\s*\[|$)', response.text)))
             for card_name in card_names:
                 card_id = get_card_id(card_name.strip())
                 if card_id:
