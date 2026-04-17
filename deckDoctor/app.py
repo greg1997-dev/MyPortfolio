@@ -109,7 +109,7 @@ if api_key:
             
             # 5. SIDEBAR IMAGES
             st.sidebar.header("Visual Decklist")
-            card_names = re.findall(r'\*\*(.+?)\*\*|\n- (.+?)\n|^- (.+?)$', response.text, re.MULTILINE)
+            card_names = re.findall(r'\d+x\s+([^\[\n]+?)(?:\s*\[|$)', response.text)
             card_names = [name for match in card_names for name in match if name]
             card_names = list(set(card_names))  # Remove duplicates
             ids = list(set(re.findall(r"\[ID: (\d+)\]", response.text)))
