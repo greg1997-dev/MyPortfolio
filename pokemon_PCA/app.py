@@ -13,7 +13,7 @@ st.set_page_config(
 @st.cache_data
 def load_data():
 
-    return pd.read_csv("pca_pokemon.csv")
+    return pd.read_csv("https://raw.githubusercontent.com/greg1997-dev/MyPortfolio/refs/heads/main/pokemon_PCA/poke_pca.csv")
 
 pca_df = load_data()
 
