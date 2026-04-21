@@ -66,6 +66,8 @@ Explore how Pokémon cluster based on their stats using PCA.
 Switch between 2D and 3D views, and filter by generation and type.
 """)
 
+col_chart, col_card = st.columns([3, 1])
+
 
 if filtered_df.empty:
     st.warning("No data available for selected filters.")
@@ -80,7 +82,7 @@ if mode == "2D PCA":
         color="type",
         hover_name="name",
         color_discrete_map=typeColors,
-        hover_data={"sprite_url": True}
+        render_mode="webgl"  # faster
     )
 
 else:
@@ -91,31 +93,8 @@ else:
         z="PC3",
         color="type",
         hover_name="name",
-        color_discrete_map=typeColors,
-        hover_data={"sprite_url": True}
+        color_discrete_map=typeColors
     )
-
-
-fig.update_traces(
-    customdata=filtered_df[['sprite_url']],
-    hovertemplate="""
-    <b>%{hovertext}</b><br>
-    <img src="%{customdata[0]}" width="100"><br>
-    """
-)
-
-
-if mode == "3D PCA":
-    x_range = [filtered_df['PC1'].min(), filtered_df['PC1'].max()]
-    y_range = [filtered_df['PC2'].min(), filtered_df['PC2'].max()]
-    z_range = [filtered_df['PC3'].min(), filtered_df['PC3'].max()]
-
-    fig.add_trace(go.Scatter3d(x=x_range, y=[0,0], z=[0,0], mode='lines',
-                               line=dict(color='black', width=4), showlegend=False))
-    fig.add_trace(go.Scatter3d(x=[0,0], y=y_range, z=[0,0], mode='lines',
-                               line=dict(color='black', width=4), showlegend=False))
-    fig.add_trace(go.Scatter3d(x=[0,0], y=[0,0], z=z_range, mode='lines',
-                               line=dict(color='black', width=4), showlegend=False))
 
 if selected_pokemon != "None":
     highlight_df = filtered_df[filtered_df['name'] == selected_pokemon]
@@ -126,7 +105,7 @@ if selected_pokemon != "None":
                 x=highlight_df['PC1'],
                 y=highlight_df['PC2'],
                 mode='markers+text',
-                marker=dict(size=14, color='black'),
+                marker=dict(size=12, color='black'),
                 text=highlight_df['name'],
                 textposition="top center",
                 showlegend=False
@@ -147,13 +126,40 @@ if selected_pokemon != "None":
         )
 
 
+if mode == "3D PCA":
+    x_range = [filtered_df['PC1'].min(), filtered_df['PC1'].max()]
+    y_range = [filtered_df['PC2'].min(), filtered_df['PC2'].max()]
+    z_range = [filtered_df['PC3'].min(), filtered_df['PC3'].max()]
+
+    fig.add_trace(go.Scatter3d(x=x_range, y=[0,0], z=[0,0], mode='lines',
+                               line=dict(color='black', width=4), showlegend=False))
+    fig.add_trace(go.Scatter3d(x=[0,0], y=y_range, z=[0,0], mode='lines',
+                               line=dict(color='black', width=4), showlegend=False))
+    fig.add_trace(go.Scatter3d(x=[0,0], y=[0,0], z=z_range, mode='lines',
+                               line=dict(color='black', width=4), showlegend=False))
+
+
 fig.update_layout(
     margin=dict(l=0, r=0, t=40, b=0),
     legend_title="Type"
 )
 
 
-st.plotly_chart(fig, use_container_width=True)
+with col_chart:
+    st.plotly_chart(fig, use_container_width=True)
+
+with col_card:
+    st.subheader("Pokémon Details")
+
+    if selected_pokemon == "None":
+        st.info("Select a Pokémon to see details")
+    else:
+        pokemon = filtered_df[filtered_df['name'] == selected_pokemon].iloc[0]
+
+        st.image(pokemon['sprite_url'], width=120)
+        st.markdown(f"### {pokemon['name']}")
+        st.write(f"**Type:** {pokemon['type']}")
+        st.write(f"**Generation:** {pokemon['generation']}")
 
 
 st.markdown("""
