@@ -12,8 +12,10 @@ st.set_page_config(
 
 @st.cache_data
 def load_data():
-
-    return pd.read_csv("https://raw.githubusercontent.com/greg1997-dev/MyPortfolio/refs/heads/main/pokemon_PCA/poke_pca.csv")
+    df=pd.read_csv("https://raw.githubusercontent.com/greg1997-dev/MyPortfolio/refs/heads/main/pokemon_PCA/poke_pca.csv")
+    df['name']=df['name'].str.title()
+    df['generation']=df['generation'].str.title()
+    return df
 
 pca_df = load_data()
 
