@@ -125,6 +125,10 @@ if selected_pokemon != "None":
             )
         )
 
+if mode == "2D PCA":
+    fig.add_hline(y=0, line=dict(color="black", width=2))
+    fig.add_vline(x=0, line=dict(color="black", width=2))
+
 
 if mode == "3D PCA":
     x_range = [filtered_df['PC1'].min(), filtered_df['PC1'].max()]
