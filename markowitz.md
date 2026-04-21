@@ -11,11 +11,11 @@ On each iteration, 100,000 portfolios were generated and an efficient frontier w
 The assets used were S&P 500 and Nasdaq 100. 
 On each iteration I used this strategy on 2022 Reto Actinver. 
 
-![Efficient Frontier in one Iteration](https://storage.googleapis.com/objects-hosted/Screenshot%202024-04-15%20at%208.50.40%20AM.png)
+![Efficient Frontier in one Iteration](https://raw.githubusercontent.com/greg1997-dev/MyPortfolio/refs/heads/main/assets/Screenshot%202024-04-15%20at%208.50.40%20AM.png)
 
-![Portfolio results](https://storage.googleapis.com/objects-hosted/Screenshot%202024-04-15%20at%208.55.31%20AM.png)
-![Portfolio results](https://storage.googleapis.com/objects-hosted/Screenshot%202024-04-15%20at%208.56.04%20AM.png)
-![Portfolio results](https://storage.googleapis.com/objects-hosted/Screenshot%202024-04-15%20at%208.56.39%20AM.png)
+![Portfolio results](https://raw.githubusercontent.com/greg1997-dev/MyPortfolio/refs/heads/main/assets/Screenshot%202024-04-15%20at%208.55.31%20AM.png)
+![Portfolio results](https://raw.githubusercontent.com/greg1997-dev/MyPortfolio/refs/heads/main/assets/Screenshot%202024-04-15%20at%208.56.04%20AM.png)
+![Portfolio results](https://raw.githubusercontent.com/greg1997-dev/MyPortfolio/refs/heads/main/assets/Screenshot%202024-04-15%20at%208.56.39%20AM.png)
 
 
 [Back to main page](https://greg1997-dev.github.io/MyPortfolio/)
