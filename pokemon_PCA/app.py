@@ -3,27 +3,21 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-# -----------------------------
-# CONFIG
-# -----------------------------
+
 st.set_page_config(
     page_title="Pokémon PCA Explorer",
     layout="wide"
 )
 
-# -----------------------------
-# LOAD DATA
-# -----------------------------
+
 @st.cache_data
 def load_data():
-    # Replace with your actual file or data source
+
     return pd.read_csv("pca_pokemon.csv")
 
 pca_df = load_data()
 
-# -----------------------------
-# COLOR MAP
-# -----------------------------
+
 typeColors = {
     'normal': '#A8A878','fire': '#F08030','water': '#6890F0','electric': '#F8D030',
     'grass': '#78C850','ice': '#98D8D8','fighting': '#C03028','poison': '#A040A0',
@@ -32,9 +26,7 @@ typeColors = {
     'steel': '#B8B8D0','fairy': '#EE99AC'
 }
 
-# -----------------------------
-# SIDEBAR
-# -----------------------------
+
 st.sidebar.title("Controls")
 
 mode = st.sidebar.radio(
@@ -54,21 +46,19 @@ types = st.sidebar.multiselect(
     default=sorted(pca_df['type'].unique())
 )
 
-# Filter data
+
 filtered_df = pca_df[
     (pca_df['generation'].isin(generations)) &
     (pca_df['type'].isin(types))
 ]
 
-# Highlight Pokémon
+
 selected_pokemon = st.sidebar.selectbox(
     "Highlight Pokémon",
     ["None"] + sorted(filtered_df['name'].unique())
 )
 
-# -----------------------------
-# MAIN TITLE
-# -----------------------------
+
 st.title("Pokémon PCA Explorer")
 
 st.markdown("""
@@ -76,16 +66,12 @@ Explore how Pokémon cluster based on their stats using PCA.
 Switch between 2D and 3D views, and filter by generation and type.
 """)
 
-# -----------------------------
-# HANDLE EMPTY DATA
-# -----------------------------
+
 if filtered_df.empty:
     st.warning("No data available for selected filters.")
     st.stop()
 
-# -----------------------------
-# BUILD FIGURE
-# -----------------------------
+
 if mode == "2D PCA":
     fig = px.scatter(
         filtered_df,
@@ -109,9 +95,7 @@ else:
         hover_data={"sprite_url": True}
     )
 
-# -----------------------------
-# CUSTOM HOVER (IMAGES)
-# -----------------------------
+
 fig.update_traces(
     customdata=filtered_df[['sprite_url']],
     hovertemplate="""
@@ -120,9 +104,7 @@ fig.update_traces(
     """
 )
 
-# -----------------------------
-# AXIS LINES FOR 3D
-# -----------------------------
+
 if mode == "3D PCA":
     x_range = [filtered_df['PC1'].min(), filtered_df['PC1'].max()]
     y_range = [filtered_df['PC2'].min(), filtered_df['PC2'].max()]
@@ -135,9 +117,6 @@ if mode == "3D PCA":
     fig.add_trace(go.Scatter3d(x=[0,0], y=[0,0], z=z_range, mode='lines',
                                line=dict(color='black', width=4), showlegend=False))
 
-# -----------------------------
-# HIGHLIGHT SELECTED POKÉMON
-# -----------------------------
 if selected_pokemon != "None":
     highlight_df = filtered_df[filtered_df['name'] == selected_pokemon]
 
@@ -167,22 +146,16 @@ if selected_pokemon != "None":
             )
         )
 
-# -----------------------------
-# LAYOUT IMPROVEMENTS
-# -----------------------------
+
 fig.update_layout(
     margin=dict(l=0, r=0, t=40, b=0),
     legend_title="Type"
 )
 
-# -----------------------------
-# DISPLAY
-# -----------------------------
+
 st.plotly_chart(fig, use_container_width=True)
 
-# -----------------------------
-# FOOTER / INSIGHT
-# -----------------------------
+
 st.markdown("""
 ---
 💡 **Tip:** Try filtering by a single type or generation to see how clusters change.
