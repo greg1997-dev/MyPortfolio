@@ -1,4 +1,4 @@
-# Can You Actually Beat the Lottery? A Data Science Experiment
+# Can You Actually Beat the Lottery? A Data Approach
  
 ## How It Started: Power Balls and False Hope
 
