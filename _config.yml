@@ -9,7 +9,9 @@ description: >
   and modeling NCAA brackets, to portfolio optimization and experimental lab evaluations.
   My toolkit includes Python (Pandas, Scikit-learn, Plotly, Statsmodels), R (for teaching Probability and Statistics), and cloud tools like GCP and Looker Studio.
   Whether it's identifying undervalued prospects or building AI-powered draft agents, I turn data into decisions.
-#logo: /assets/logo.png
+
+logo: /assets/logo.png
+
 theme: jekyll-theme-minimal
 markdown: kramdown
 kramdown:
