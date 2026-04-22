@@ -79,7 +79,7 @@ if api_key:
             search_query = f"Competitive {archetype} deck lists using {engine_context} for 2026 meta."
             results = collection.query(
                 query_texts=[search_query],
-                n_results=56
+                n_results=min(56, collection.count())
             )
 
             # 2. DATA PREP
