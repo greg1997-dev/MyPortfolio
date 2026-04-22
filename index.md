@@ -105,7 +105,7 @@ Want to compare two edge rushers' pass-rush moves? It synthesizes multiple exper
     * Analysis of Variance
     * Experimental Design
  - **Upcoming term:** On the next term, students will have a reference guide, you can read the
- - [WIP here](https://github.com/greg1997-dev/MyPortfolio/blob/main/assets/Prob_and_stats_ref_guide.pdf).
+[WIP here](https://github.com/greg1997-dev/MyPortfolio/blob/main/assets/Prob_and_stats_ref_guide.pdf).
  
 
 ***
@@ -156,6 +156,8 @@ Purdue
 - EDA 
 - Created a topic classifier with an Latent Dichrilet Allocator (LDA)
 - Classified possitive topics into 10 different categories based on their sentiment score
+
+
 ***
 
 # 🚗 [Insurance Project](https://github.com/greg1997-dev/MyPortfolio/blob/main/notebooks/Proyecto_Seguros.ipynb)
