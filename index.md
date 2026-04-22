@@ -63,7 +63,7 @@ The model flagged several undrafted players as "should have been drafted":
 
 ***
 
-# 🎲 [Can You Beat the Lottery? Testing the "Jinxed Numbers" Myth](link-to-github)
+# 🎲 [Can You Beat the Lottery? Testing the "Jinxed Numbers" Myth](https://greg1997-dev.github.io/MyPortfolio/lottery.html)
 - Built 4 probabilistic models to test if Mexican Melate Retro draws show any detectable patterns (spoiler: they do, but you still shouldn't play)
 - Implemented set-likelihood MLE with dynamic programming to efficiently compute combinatorial probabilities over 3.2M possible outcomes
 - Rolling out-of-sample backtest on 100+ draws showed models consistently beat uniform random—suggesting mechanical biases in lottery equipment
