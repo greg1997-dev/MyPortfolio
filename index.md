@@ -3,7 +3,7 @@ layout: default
 title: Andrés Gregori Portfolio
 ---
 
-# 📊 [Principal Component Analysis for Pokemons](https://gregolas-poke-pca.streamlit.app/)
+# 📊 [Principal Component Analysis for Pokemon](https://gregolas-poke-pca.streamlit.app/)
 **Objective**: To understand in a more comparable way which Pokemon is the best across all statistics. 
 
 - PC1: Explains 43.3% of the variance
