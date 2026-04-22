@@ -5,6 +5,7 @@ sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 import streamlit as st
 import chromadb
+from chromadb.utils import embedding_functions
 import re
 from google import genai
 import os
@@ -44,7 +45,8 @@ STAPLE_LIST = [
 
 base_path = os.path.dirname(os.path.abspath(__file__))
 CHROMA_PATH = os.path.join(base_path, "yugioh_db")
-DATA_PATH = os.path.join(base_path, "yugioh_db")  # Folder where your JSON files are
+DATA_DIR = os.path.join(base_path, "data")  # Your JSON files go here
+COLLECTION_NAME = 'yugioh_master_collection'
 
 
 def get_card_id(card_name):
@@ -60,107 +62,124 @@ def get_card_id(card_name):
     return None
 
 
-def load_deck_data():
-    """Load all JSON files from the data directory"""
-    all_data = []
-    json_files = glob.glob(os.path.join(DATA_PATH, "*.json"))
-
-    if not json_files:
-        st.error(f"No JSON files found in {DATA_PATH}")
-        return []
-
-    for json_file in json_files:
-        try:
-            with open(json_file, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-                # Handle both list and dict formats
-                if isinstance(data, list):
-                    all_data.extend(data)
-                else:
-                    all_data.append(data)
-        except Exception as e:
-            st.warning(f"Error loading {json_file}: {e}")
-
-    return all_data
-
-
 @st.cache_resource
 def initialize_database():
-    """Initialize or rebuild the ChromaDB database from JSON files"""
+    """Initialize or rebuild the ChromaDB database from JSON card data"""
     import shutil
 
     try:
+        # Create client
         client = chromadb.PersistentClient(path=CHROMA_PATH)
+
+        # Use the default embedding function (all-MiniLM-L6-v2)
+        embedding_func = embedding_functions.DefaultEmbeddingFunction()
 
         # Try to get existing collection
         try:
-            collection = client.get_collection(name="yugioh_master_collection")
+            collection = client.get_collection(
+                name=COLLECTION_NAME,
+                embedding_function=embedding_func
+            )
 
-            # If collection exists but is empty or corrupted, rebuild
-            if collection.count() == 0:
+            # If collection exists and has data, use it
+            if collection.count() > 0:
+                st.sidebar.success(f"✅ Database loaded: {collection.count()} cards")
+                return collection
+            else:
+                # Collection exists but is empty - rebuild
                 raise Exception("Collection is empty, rebuilding...")
-
-            return collection
 
         except Exception as e:
             # Collection doesn't exist or is corrupted - rebuild
-            st.info(f"Building database from source files... ({str(e)})")
+            st.info(f"🔨 Building database from card data... ({str(e)})")
 
-            # Delete corrupted database
+            # Delete old collection if it exists
             try:
-                client.delete_collection(name="yugioh_master_collection")
+                client.delete_collection(name=COLLECTION_NAME)
             except:
                 pass
 
             # Create fresh collection
             collection = client.create_collection(
-                name="yugioh_master_collection",
+                name=COLLECTION_NAME,
+                embedding_function=embedding_func,
                 metadata={"hnsw:space": "cosine"}
             )
 
-            # Load data from JSON files
-            deck_data = load_deck_data()
+            # Get all JSON files
+            json_files = glob.glob(os.path.join(DATA_DIR, "*.json"))
 
-            if not deck_data:
-                st.error("No deck data found! Please check your JSON files.")
+            if not json_files:
+                st.error(f"❌ No JSON files found in {DATA_DIR}")
+                st.info("Please add your card JSON files to the 'data' folder")
                 st.stop()
 
-            # Prepare data for ChromaDB
-            documents = []
-            metadatas = []
-            ids = []
+            total_cards = 0
+            progress_bar = st.progress(0)
+            status_text = st.empty()
 
-            for idx, item in enumerate(deck_data):
-                # Adjust these keys based on your JSON structure
-                # Common formats: 'text', 'content', 'deck_list', etc.
-                if isinstance(item, dict):
-                    # Try common key names
-                    text = item.get('text') or item.get('content') or item.get('deck_list') or str(item)
-                    metadata = item.get('metadata', {})
-                    item_id = item.get('id', f"deck_{idx}")
-                else:
-                    text = str(item)
-                    metadata = {}
-                    item_id = f"deck_{idx}"
+            # Process each file
+            for file_idx, file_path in enumerate(json_files):
+                filename = os.path.basename(file_path)
+                status_text.text(f"Indexing {filename}...")
 
-                documents.append(text)
-                metadatas.append(metadata)
-                ids.append(str(item_id))
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        cards = json.load(f)
 
-            # Add to collection in batches
-            batch_size = 100
-            for i in range(0, len(documents), batch_size):
-                collection.add(
-                    documents=documents[i:i + batch_size],
-                    metadatas=metadatas[i:i + batch_size],
-                    ids=ids[i:i + batch_size]
-                )
+                    # Handle both dict and list formats
+                    if isinstance(cards, dict):
+                        # If it's a dict with a 'data' key (YGOPRODeck API format)
+                        cards = cards.get('data', [cards])
+                    elif not isinstance(cards, list):
+                        cards = [cards]
 
-            st.success(f"✅ Database built successfully with {len(documents)} deck entries!")
+                    # Batch processing (ChromaDB limit is around 5k per add)
+                    batch_size = 500
+                    for i in range(0, len(cards), batch_size):
+                        batch = cards[i: i + batch_size]
+
+                        # Prepare data for this batch
+                        ids = [str(c.get('id', f"{filename}_{i + j}")) for j, c in enumerate(batch)]
+
+                        # Embed the card name + description for better search
+                        documents = [
+                            f"Name: {c.get('name', 'Unknown')}\nEffect: {c.get('desc', 'No description')}"
+                            for c in batch
+                        ]
+
+                        # Metadata for filtering
+                        metadatas = [{
+                            "name": c.get("name", "Unknown"),
+                            "type": c.get("type", "Unknown"),
+                            "archetype": str(c.get("archetype", "None")),
+                            "id": str(c.get("id", "")),
+                            "file_source": filename
+                        } for c in batch]
+
+                        collection.add(
+                            ids=ids,
+                            documents=documents,
+                            metadatas=metadatas
+                        )
+
+                        total_cards += len(batch)
+
+                except Exception as e:
+                    st.warning(f"⚠️ Error processing {filename}: {e}")
+
+                # Update progress
+                progress = (file_idx + 1) / len(json_files)
+                progress_bar.progress(progress)
+
+            progress_bar.empty()
+            status_text.empty()
+            st.success(f"✅ Database built successfully with {total_cards} cards!")
+
             return collection
 
     except Exception as e:
-        st.error(f"Fatal database error: {e}")
+        st.error(f"❌ Fatal database error: {e}")
         st.info("Try deleting the yugioh_db folder manually and restarting the app.")
         st.stop()
 
@@ -169,20 +188,26 @@ def initialize_database():
 collection = initialize_database()
 
 # UI & LLM LOGIC
-st.title("Deck Doctor RAG")
+st.title("🎴 Deck Doctor RAG")
+st.caption("Yu-Gi-Oh! AI Deck Builder powered by RAG")
 
-# Show database stats
-st.sidebar.metric("Deck Entries in Database", collection.count())
+# Show database stats in sidebar
+st.sidebar.header("📊 Database Info")
+st.sidebar.metric("Total Cards", collection.count())
 
-api_key = st.sidebar.text_input("Gemini API Key", type="password")
+api_key = st.sidebar.text_input("🔑 Gemini API Key", type="password")
 
 if api_key:
     genai_client = genai.Client(api_key=api_key)
-    archetype = st.text_input("Enter Archetype", "Snake-Eye")
-    engine_context = st.text_input("Enter any engine you would like to add.", "Codebreaker")
 
-    if st.button("Generate Deck"):
-        with st.spinner("Searching database and consulting AI..."):
+    col1, col2 = st.columns(2)
+    with col1:
+        archetype = st.text_input("🎯 Enter Archetype", "Snake-Eye")
+    with col2:
+        engine_context = st.text_input("⚙️ Engine/Tech Cards", "Codebreaker")
+
+    if st.button("🚀 Generate Deck", type="primary"):
+        with st.spinner("🔍 Searching database and consulting AI..."):
             try:
                 # 1. RAG SEARCH
                 search_query = f"Competitive {archetype} deck lists using {engine_context} for 2026 meta."
@@ -213,27 +238,42 @@ if api_key:
                     7. MANDATORY: Format the decklist as 'Quantityx Card Name' (e.g., * 3x Ash Blossom & Joyous Spring). Do not add anything else on that line when listing the card. 
                 """
 
-                response = genai_client.models.generate_content(model="gemini-3.1-flash-lite-preview", contents=prompt)
+                response = genai_client.models.generate_content(
+                    model="gemini-2.0-flash-exp",
+                    contents=prompt
+                )
 
                 # 4. DISPLAY
+                st.markdown("### 📋 Generated Decklist")
                 st.markdown(response.text)
 
                 # 5. SIDEBAR IMAGES
-                st.sidebar.header("Visual Decklist")
+                st.sidebar.header("🎴 Visual Decklist")
                 extracted = re.findall(r'\d+x\s+(.+?)(?=\n|$)', response.text)
                 card_names = list(set([name.strip() for name in extracted]))
 
-                for card_name in card_names:
-                    card_id = get_card_id(card_name.strip())
-                    if card_id:
-                        st.sidebar.image(
-                            f"https://images.ygoprodeck.com/images/cards/{card_id}.jpg",
-                            caption=card_name,
-                            use_container_width=True
-                        )
+                if card_names:
+                    for card_name in card_names:
+                        card_id = get_card_id(card_name.strip())
+                        if card_id:
+                            st.sidebar.image(
+                                f"https://images.ygoprodeck.com/images/cards/{card_id}.jpg",
+                                caption=card_name,
+                                use_container_width=True
+                            )
+                else:
+                    st.sidebar.warning("No cards extracted. Try a different archetype.")
 
             except Exception as e:
-                st.error(f"Error generating deck: {e}")
+                st.error(f"❌ Error generating deck: {e}")
+                st.info("Check your API key or try again.")
 
 else:
-    st.info("Please enter your Gemini API key in the sidebar to begin.")
+    st.info("👈 Please enter your Gemini API key in the sidebar to begin.")
+    st.markdown("""
+    ### How to use:
+    1. Get a free Gemini API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
+    2. Enter the key in the sidebar
+    3. Choose your archetype and any tech cards
+    4. Click Generate Deck!
+    """)
