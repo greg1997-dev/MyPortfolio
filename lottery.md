@@ -141,4 +141,4 @@ The models work *way better than random*, but not *nearly well enough* to overco
  
 ---
  
-*Disclaimer: This is for educational purposes only. Do not gamble money you can't afford to lose. The lottery is designed to take your money, and math confirms this. Seriously, buy the tacos instead.*
+*Disclaimer: This is for educational purposes only. Do not gamble money you can't afford to lose. The lottery is designed to take your money, and math confirms this.*
