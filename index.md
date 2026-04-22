@@ -5,9 +5,6 @@ title: Andrés Gregori Portfolio
 
 # 📊 [Which Pokémon Is Actually the Best?](https://gregolas-poke-pca.streamlit.app/)
 
-How do you actually compare Pokémon when they have 6 different stats (HP, Attack, Defense, Sp. Attack, Sp. Defense, Speed)? Is a tank with high Defense better than a glass cannon with high Attack? 
-
-**What I Built:**
 - Applied Principal Component Analysis (PCA) to reduce 6 combat stats into 2 interpretable dimensions that capture "overall battling power"
 - Built an interactive Streamlit dashboard where you can visualize all 800+ Pokémon in 2D space
 - **PC1 (43.3% of variance)**: Basically "raw power" how much total stats a Pokémon has
