@@ -5,7 +5,7 @@ optimize returns for a given level of risk.
 It emphasizes diversification, the idea that by combining assets with different risk profiles, you can reduce overall
 portfolio risk without sacrificing returns.
 
-After reading my father in law's thesis about this subject, I decided to reproduce what he made but now on a programming
+After reading my father-in-law's thesis about this subject, I decided to reproduce what he made but now on a programming
 language such as Python but with a twist.
 The main issue on the thesis was that the algorithm took all of the assets on
 [^MXX](https://finance.yahoo.com/quote/%5EMXX?.tsrc=fin-srch) and there was no change at all.

@@ -1,7 +1,8 @@
 # NFL Combine
 The NFL Scouting Combine is an annual, week-long event held normally in February at Lucas Oil Stadium in Indianapolis. 
 It's a crucial pre-draft showcase for top college football players hoping to be selected by NFL teams.  
-Around 300 athletes are invited to perform a battery of physical and mental tests designed to assess their skills and potential on the field.
+Around 300 athletes are invited to perform a battery of physical and mental tests designed to assess their skills and
+potential on the field.
 
 The core of the Combine is all about measurables. 
 Players run the 40-yard dash, vertical jump, and broad jump to demonstrate speed, explosiveness, and agility. 
