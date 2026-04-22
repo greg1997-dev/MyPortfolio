@@ -17,6 +17,7 @@ and I immediately text my father-in-law who plays too: "Is that you?"
 
 The answer is always: "No."
 
+
 But it got me thinking: **How do people actually hit these combinations? Is there any pattern?
 Are some numbers consistently more likely to come up?**
 
