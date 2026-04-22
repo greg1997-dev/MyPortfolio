@@ -45,7 +45,7 @@ STAPLE_LIST = [
 
 base_path = os.path.dirname(os.path.abspath(__file__))
 CHROMA_PATH = os.path.join(base_path, "yugioh_db")
-DATA_DIR = os.path.join(base_path, "yugioh_db")  # Your JSON files go here
+DATA_DIR = os.path.join(base_path, "yugioh_db")
 COLLECTION_NAME = 'yugioh_master_collection'
 
 
@@ -68,7 +68,7 @@ def initialize_database():
     import shutil
 
     try:
-        # Create client
+
         client = chromadb.PersistentClient(path=CHROMA_PATH)
 
         # Use the default embedding function (all-MiniLM-L6-v2)
@@ -108,11 +108,6 @@ def initialize_database():
 
             # Get all JSON files
             json_files = glob.glob(os.path.join(DATA_DIR, "*.json"))
-
-            if not json_files:
-                st.error(f"❌ No JSON files found in {DATA_DIR}")
-                st.info("Please add your card JSON files to the 'data' folder")
-                st.stop()
 
             total_cards = 0
             progress_bar = st.progress(0)
@@ -276,4 +271,5 @@ else:
     2. Enter the key in the sidebar
     3. Choose your archetype and any tech cards
     4. Click Generate Deck!
+    5. Keys are not stored anywhere, so when you close the page it will not save it.
     """)
