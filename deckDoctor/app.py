@@ -234,7 +234,7 @@ if api_key:
                 """
 
                 response = genai_client.models.generate_content(
-                    model="gemini-2.0-flash-exp",
+                    model="gemini-3.1-flash-lite-preview",
                     contents=prompt
                 )
 
