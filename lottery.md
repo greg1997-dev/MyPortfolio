@@ -1,28 +1,26 @@
 # Can You Actually Beat the Lottery? A Data Science Experiment
  
-## Power Balls and their impact
+## How It Started: Power Balls and False Hope
 
-Many countries around the world have these Power Ball draws. You pick a certain amount of numbers from a pool and if you predicted all the numbers you win the jackpot. Easy. Nowadays people play masssively lottery draws with the hope of hitting the jackpot and retiring early. 
+Lottery games are everywhere. Pick some numbers from a pool, match them all, win the jackpot. Simple, right? Millions of people play every week hoping to retire early, despite odds that are absolutely brutal.
 
-However, the odds are insanely low.
+"The lottery is rigged." "It's all random, you can't predict it." "Those numbers are cursed."
 
+I've heard these phrases my entire life in Mexico whenever lottery draws come up. One family member plays religiously—like clockwork, someone always claims their numbers are "due" or that certain balls "never come up." But they keep playing anyway. I remember my uncle would always keep his ticket folded in his coat pocket, like a lucky charm that never worked.
 
-"The lottery is rigged." "It's all random, you can't predict it."
- 
-I've heard these phrases my entire life in Mexico whenever any Power Ball contest comes up.
-One familiy member plays it constantly, and like clockwork, someone always says their numbers are "due"
-or that certain balls "never come up." But they keep playing. I remember my uncle would always keep his
-ticket on one of his coats side pocket. 
-I play occasionaly through an app and I take a look at the results and sometimes see that there is one lucky person that gets the jackpot. 
-I text my in-law that plays this as well saying: "is that you" and we always get the same answer: no. 
-But how people get these combinations? Is there any patter to it? Are there some numvers that are consistently more likely to come up? 
-So I decided to find out.
- 
-This project started as a challenge to understand deeper about what can we really get out of observations. Also, a Netflix series premiered called "Melate que si" that talked about a fraud that was made on 2012 with the Melate draw. 
-I thought: let's put some actual statistics to the test. If the lottery is perfectly random, no model should beat a uniform guess. 
-If there's even the slightest mechanical bias: worn balls, systematic replacement patterns, temperature effects, maybe we can detect it.
- 
-Spoiler alert: I found some interesting things.
+I play occasionally through an app, mostly out of curiosity. Every so often I see that someone actually hit the jackpot, and I immediately text my father-in-law who plays too: "Is that you?" 
+
+The answer is always: "No."
+
+But it got me thinking: **How do people actually hit these combinations? Is there any pattern? Are some numbers consistently more likely to come up?**
+
+Then a Netflix series dropped called *"Melate que sí"* about a massive fraud in the 2012 Melate draw in Mexico. Watching it made me wonder: even without fraud, could there be detectable biases in how balls are drawn? 
+
+So I decided to find out with data.
+
+The setup was simple: If the lottery is perfectly random, no statistical model should beat a uniform guess. But if there's even the slightest mechanical bias—worn balls, replacement schedules, temperature effects on the tumbler—maybe we could detect it in the historical data.
+
+**Spoiler alert: I found some interesting things.**
  
 ## Just How Bad Are Your Odds?
  
