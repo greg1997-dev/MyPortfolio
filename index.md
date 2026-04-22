@@ -85,12 +85,12 @@ were also relevant for our claim.
 - Beats many state-of-the-art algorithms regarding prediction of games.
 
 ***
-# 🎲 [Melate Retro Lottery: Probabilistic Forecasting Models](link-to-github-or-visualization)
-- Developed a probabilistic modeling framework to predict lottery outcomes using exact set-likelihood estimation rather than naive frequency counting
-- Implemented 4 competing models (Uniform baseline, Dirichlet posterior, Exact MLE with BFGS optimization, EWMA-weighted Dirichlet) with rolling out-of-sample backtesting
-- Engineered dynamic programming algorithms (forward-backward) to efficiently compute combinatorial normalization constants and inclusion probabilities for 6-of-39 selection
-- Exact MLE model achieved measurable improvement over uniform baseline in log-likelihood scoring across 100+ test draws
-- Stack: R (tidyverse, optimization), mathematical statistics, combinatorial probability
+# 🎲 [Can You Beat the Lottery? Testing the "Jinxed Numbers" Myth](link-to-github)
+- Built 4 probabilistic models to test if Mexican Melate Retro draws show any detectable patterns (spoiler: they do, but you still shouldn't play)
+- Implemented set-likelihood MLE with dynamic programming to efficiently compute combinatorial probabilities over 3.2M possible outcomes
+- Rolling out-of-sample backtest on 100+ draws showed models consistently beat uniform random—suggesting mechanical biases in lottery equipment
+- Found evidence of non-stationarity: recent draws matter more (EWMA model), likely due to ball wear/replacement cycles
+- **Bottom line**: Models work way better than random, but nowhere near enough to overcome the house edge.
 ***
 
 
