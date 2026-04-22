@@ -50,19 +50,16 @@ optimal portfolio each week to get the best profits in a return-risk trade-off.
 **The Question:** Every year, NFL teams overlook talented players in the draft who go undrafted (UDFA) despite solid combine measurements. Can we build a model to identify these hidden gems before they prove everyone wrong?
 
 **What I Built:**
-- Trained classification models (Logistic Regression vs Random Forest) to predict draft likelihood based purely on combine measurables—the same data scouts use
-- Identified which physical measurements actually matter most for getting drafted (spoiler: it's not what most people think)
-- Tested hypothesis: Do different positions have statistically different measurement profiles? (Answer: absolutely yes)
+- Trained classification models (Logistic Regression vs Random Forest) to predict draft likelihood based purely on combine measurables, the same data scouts use.
+- Identified which physical measurements actually matter most for getting drafted.
+- Tested hypothesis: Do different positions have statistically different measurement profiles?
 - **Best model**: Logistic Regression with Lasso penalty (AUC = 0.72)
 - **Most important features**: 40-yard dash time and weight dominated—speed and size are king
 
 **Real-World Validation:**
 The model flagged several undrafted players as "should have been drafted":
-- **Jaylen Warren** (RB, Steelers) - now a key contributor
-- **Cameron Dicker** (K, Chargers) - reliable NFL kicker  
-- **Brock Purdy** (QB, 49ers) - the model's strongest recommendation... yeah, *that* Brock Purdy
-
-Turns out the combine data doesn't lie—NFL teams just sometimes ignore it.
+- **Cameron Dicker** (K, Chargers) - reliable NFL kicker and statistically the most efficient.  
+- **Brock Purdy** (QB, 49ers) - one of the model's strongest recommendations.
 
 ***
 
