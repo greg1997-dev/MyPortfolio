@@ -112,6 +112,7 @@ Sports History Odds and NFLFastR
 were also relevant for our claim.
 - Beats many state-of-the-art algorithms regarding prediction of games.
 
+***
 
 # 📊 [Sankey Report for Laboratory](https://storage.googleapis.com/objects-hosted/Screenshot%202024-03-13%20at%2012.00.24%20PM.png)
  - Developed an end-to-end data pipeline to provide ad hoc analytics on 
