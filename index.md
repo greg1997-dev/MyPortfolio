@@ -3,6 +3,13 @@ layout: default
 title: Andrés Gregori Portfolio
 ---
 
+# 📊 [Principal Component Analysis for Pokemons](https://gregolas-poke-pca.streamlit.app/)
+**Objective**: To understand in a more comparable way which Pokemon is the best across all statistics. 
+
+- PC1: Explains 43.3% of the variance
+- PC2: Explains 19.1% of the variance
+- Mewtwo is the best Pokemon overall
+
 # 📈 [Markowitz Model for Optimal Portfolio](https://greg1997-dev.github.io/MyPortfolio/markowitz.html)
 **Objective:** To develop a model that helped on trading challenges to select the
 optimal portfolio each week to get the best profits in a return-risk trade-off.
@@ -68,7 +75,6 @@ based on the rankings and team needs.
 
 ***
 
-
 # Predicting NFL Matches with different ML Models and variables
 - Using publicly available data like scraping tables from Pro Football Reference,
 Sports History Odds and NFLFastR
@@ -79,14 +85,12 @@ were also relevant for our claim.
 - Beats many state-of-the-art algorithms regarding prediction of games.
 
 ***
-
-# MCMC to prove lottery is strictly random or an associate distribution can be found
-- Worked with Mexican Power Balls such as Chispazo and Melate Retro.
-- Markov Chain Monte Carlo Simulations (MCMC) to prove such claim.
-- -146 and -93 log likelihood on simulation distributions compared with real
-distribution of contests.
-- Failed to reject the hypothesis that Lottery contests are completely random.
-
+# 🎲 [Melate Retro Lottery: Probabilistic Forecasting Models](link-to-github-or-visualization)
+- Developed a probabilistic modeling framework to predict lottery outcomes using exact set-likelihood estimation rather than naive frequency counting
+- Implemented 4 competing models (Uniform baseline, Dirichlet posterior, Exact MLE with BFGS optimization, EWMA-weighted Dirichlet) with rolling out-of-sample backtesting
+- Engineered dynamic programming algorithms (forward-backward) to efficiently compute combinatorial normalization constants and inclusion probabilities for 6-of-39 selection
+- Exact MLE model achieved measurable improvement over uniform baseline in log-likelihood scoring across 100+ test draws
+- Stack: R (tidyverse, optimization), mathematical statistics, combinatorial probability
 ***
 
 
@@ -123,16 +127,6 @@ Purdue
 - EDA 
 - Created a topic classifier with an Latent Dichrilet Allocator (LDA)
 - Classified possitive topics into 10 different categories based on their sentiment score
-***
-
-# 🚢 [Titanic Kaggle Competition](https://github.com/greg1997-dev/Titanic_Kaggle_Competition/blob/main/notebooks/Titanic_Kaggle_Competition.ipynb)
-
-- The most recommended Kaggle competition to get your hands on ML
-- Voter Classifier that included distinct methodologies
-- Feature engineering on deck in which passenger was assigned
-- Filled NULL values in numeric dimensions with average of the column
-- This project graded 0.77751 on accuracy
-
 ***
 
 # 🚗 [Insurance Project](https://github.com/greg1997-dev/MyPortfolio/blob/main/notebooks/Proyecto_Seguros.ipynb)
