@@ -122,7 +122,7 @@ were also relevant for our claim.
 
 ***
 
-# 📊 [Sankey Report for Laboratory](https://lh3.googleusercontent.com/d/1C3QIvqY0B3pZy9ZgEhw95h5jiw_F4_Ry)
+# 📊 [Sankey Report for Laboratory](https://lh3.googleusercontent.com/d/1jhanAZis0g85_8PCsdjMVtAIl8nMkQ2P)
  - Developed an end-to-end data pipeline to provide ad hoc analytics on 
  evaluating Lab Workers to correctly identify blood cells through a specific
  methodology.
