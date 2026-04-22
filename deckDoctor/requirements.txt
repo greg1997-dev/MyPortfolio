@@ -1,6 +1,5 @@
-google-genai
-streamlit
-chromadb
-pysqlite3-binary
-numpy
-protobuf<=3.20.x
+streamlit>=1.28.0
+chromadb>=0.4.22
+pysqlite3-binary>=0.5.2
+google-genai>=0.2.0
+requests>=2.31.0
