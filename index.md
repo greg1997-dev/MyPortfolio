@@ -122,12 +122,12 @@ were also relevant for our claim.
 
 ***
 
-# 📊 [Sankey Report for Laboratory](https://storage.googleapis.com/objects-hosted/Screenshot%202024-03-13%20at%2012.00.24%20PM.png)
+# 📊 [Sankey Report for Laboratory](https://lh3.googleusercontent.com/d/1C3QIvqY0B3pZy9ZgEhw95h5jiw_F4_Ry)
  - Developed an end-to-end data pipeline to provide ad hoc analytics on 
  evaluating Lab Workers to correctly identify blood cells through a specific
  methodology.
  - Whole architecture is hosted on GCP with the final product is delivered
- through Looker Studio.
+ through Google Data Studio.
  - Participants in this quality program are evaluated in two ways: the monthly
  expert, and an expert consensus to insure an unbiased assessment.
 
