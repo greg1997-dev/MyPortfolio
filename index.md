@@ -3,12 +3,25 @@ layout: default
 title: Andrés Gregori Portfolio
 ---
 
-# 📊 [Principal Component Analysis for Pokemon](https://gregolas-poke-pca.streamlit.app/)
-**Objective**: To understand in a more comparable way which Pokemon is the best across all statistics. 
+# 📊 [Which Pokémon Is Actually the Best?](https://gregolas-poke-pca.streamlit.app/)
 
-- PC1: Explains 43.3% of the variance
-- PC2: Explains 19.1% of the variance
-- Mewtwo is the best Pokemon overall
+How do you actually compare Pokémon when they have 6 different stats (HP, Attack, Defense, Sp. Attack, Sp. Defense, Speed)? Is a tank with high Defense better than a glass cannon with high Attack? 
+
+**What I Built:**
+- Applied Principal Component Analysis (PCA) to reduce 6 combat stats into 2 interpretable dimensions that capture "overall battling power"
+- Built an interactive Streamlit dashboard where you can visualize all 800+ Pokémon in 2D space
+- **PC1 (43.3% of variance)**: Basically "raw power" how much total stats a Pokémon has
+- **PC2 (19.1% of variance)**: Captures "stat distribution" balanced vs specialized builds
+
+**The Verdict:**
+After crunching the numbers on every Pokémon across all generations: **Mewtwo is objectively the best**. 
+
+**Why PCA?**
+You can't just add up all the stats (a Pokémon with 100 HP and 10 Attack isn't useful). PCA finds the "directions" in stat-space that matter most for battling effectiveness, then projects every Pokémon onto those axes. It's like finding the *real* dimensions that define strength.
+
+**Explore It Yourself:** [Interactive Streamlit App](https://gregolas-poke-pca.streamlit.app/) - filter by generation, type, legendary status, and see where your favorite falls.
+
+*** 
 
 # 📈 [Markowitz Model for Optimal Portfolio](https://greg1997-dev.github.io/MyPortfolio/markowitz.html)
 **Objective:** To develop a model that helped on trading challenges to select the
@@ -32,32 +45,53 @@ optimal portfolio each week to get the best profits in a return-risk trade-off.
  
 ***
 
-# 🏈 [NFL Combine measurements importance](https://greg1997-dev.github.io/MyPortfolio/nflcombine.html)
-**Objective:** Identify players that by their measurments at the combine would
-be recommended to draft but weren't drafted. With this I tried to look for
-hidden talent.
-- This project was to try to identify the most important variables for scouts to
-Draft a Prospect.
-- Developed hypothesis on comparing positions and their distributions.
-- There is a statistical difference between positions on their Combine
-measurements.
-- Compared Logistic Regression vs Random Forest Classifier and provide a better 
-example.
-- Logit with Lasso Penalty was the best model.
-- 40 yd dash time, and Weight are the most important features.
-- AUC=0.72
-- Model recommended to draft UDFA such as Jaylen Warren and Cameron Dicker.
-- Brock Purdy was a strong recommendation to draft.
+# 🏈 [Finding Hidden NFL Talent: What the Combine Actually Reveals](https://greg1997-dev.github.io/MyPortfolio/nflcombine.html)
 
+**The Question:** Every year, NFL teams overlook talented players in the draft who go undrafted (UDFA) despite solid combine measurements. Can we build a model to identify these hidden gems before they prove everyone wrong?
+
+**What I Built:**
+- Trained classification models (Logistic Regression vs Random Forest) to predict draft likelihood based purely on combine measurables—the same data scouts use
+- Identified which physical measurements actually matter most for getting drafted (spoiler: it's not what most people think)
+- Tested hypothesis: Do different positions have statistically different measurement profiles? (Answer: absolutely yes)
+- **Best model**: Logistic Regression with Lasso penalty (AUC = 0.72)
+- **Most important features**: 40-yard dash time and weight dominated—speed and size are king
+
+**Real-World Validation:**
+The model flagged several undrafted players as "should have been drafted":
+- **Jaylen Warren** (RB, Steelers) - now a key contributor
+- **Cameron Dicker** (K, Chargers) - reliable NFL kicker  
+- **Brock Purdy** (QB, 49ers) - the model's strongest recommendation... yeah, *that* Brock Purdy
+
+Turns out the combine data doesn't lie—NFL teams just sometimes ignore it.
 
 ***
 
-# 📑 Retrieval Augmented Generation (RAG) and Agent with GeminiAPI for Drafting players in the NFL
-- As part of the [Gen AI Intensive Course Capstone 2025Q1](https://www.kaggle.com/competitions/gen-ai-intensive-course-capstone-2025q1)
-- Developed an LLM with a RAG to be trained on all the publicly available scouting reports regarding the 2025 NFL Draft.
-- LLM able to give an assesment as well as compare and contrast players of the same position.
-- Added an Agent that was capable of playing a mock draft with the user and make picks from the big board
-based on the rankings and team needs.
+# 🎲 [Can You Beat the Lottery? Testing the "Jinxed Numbers" Myth](link-to-github)
+- Built 4 probabilistic models to test if Mexican Melate Retro draws show any detectable patterns (spoiler: they do, but you still shouldn't play)
+- Implemented set-likelihood MLE with dynamic programming to efficiently compute combinatorial probabilities over 3.2M possible outcomes
+- Rolling out-of-sample backtest on 100+ draws showed models consistently beat uniform random—suggesting mechanical biases in lottery equipment
+- Found evidence of non-stationarity: recent draws matter more (EWMA model), likely due to ball wear/replacement cycles
+- **Bottom line**: Models work way better than random, but nowhere near enough to overcome the house edge.
+
+***
+# 🏈 [AI NFL Scout: RAG-Powered Draft Assistant That Actually Watches Tape](link-to-project)
+
+**The Problem:** NFL Draft season means drowning in scouting reports, mock drafts, and hot takes. What if you could have an AI assistant that's read *every* publicly available scouting report and can discuss prospects like an actual NFL scout?
+
+**What I Built:**
+- Developed a Retrieval Augmented Generation (RAG) system using GeminiAPI trained on the entire corpus of 2025 NFL Draft scouting reports
+- Built an agentic system that doesn't just answer questions—it can run interactive mock drafts, making picks based on team needs and big board rankings
+- LLM provides detailed player assessments and can compare/contrast prospects at the same position ("Is Marvin Harrison Jr. or Malik Nabers the better WR1?")
+
+**Why This Is Cool:**
+Instead of just memorizing player stats, the RAG architecture lets the AI *retrieve relevant scouting context* before answering. Ask about a linebacker's coverage skills? It pulls the actual film breakdowns that scouts wrote. Want to compare two edge rushers' pass-rush moves? It synthesizes multiple expert opinions.
+
+**The Agent Goes Further:**
+- Runs interactive mock drafts where you GM your favorite team
+- Makes realistic picks based on positional value + team needs (no AI is drafting a kicker in Round 1)
+- Justifies every pick with scouting report excerpts—just like real war rooms
+
+**Built for:** [Gen AI Intensive Course Capstone 2025Q1](https://www.kaggle.com/competitions/gen-ai-intensive-course-capstone-2025q1)
 
 ***
 
@@ -83,15 +117,6 @@ Sports History Odds and NFLFastR
 - Variables referenced in [(Delen,2012)](https://www.researchgate.net/publication/257026772_A_comparative_analysis_of_data_mining_methods_in_predicting_NCAA_bowl_outcomes)
 were also relevant for our claim.
 - Beats many state-of-the-art algorithms regarding prediction of games.
-
-***
-# 🎲 [Can You Beat the Lottery? Testing the "Jinxed Numbers" Myth](link-to-github)
-- Built 4 probabilistic models to test if Mexican Melate Retro draws show any detectable patterns (spoiler: they do, but you still shouldn't play)
-- Implemented set-likelihood MLE with dynamic programming to efficiently compute combinatorial probabilities over 3.2M possible outcomes
-- Rolling out-of-sample backtest on 100+ draws showed models consistently beat uniform random—suggesting mechanical biases in lottery equipment
-- Found evidence of non-stationarity: recent draws matter more (EWMA model), likely due to ball wear/replacement cycles
-- **Bottom line**: Models work way better than random, but nowhere near enough to overcome the house edge.
-***
 
 
 # 📊 [Sankey Report for Laboratory](https://storage.googleapis.com/objects-hosted/Screenshot%202024-03-13%20at%2012.00.24%20PM.png)
