@@ -5,18 +5,22 @@ title: Andrés Gregori Portfolio
 
 # 📊 [Which Pokémon Is Actually the Best?](https://gregolas-poke-pca.streamlit.app/)
 
-- Applied Principal Component Analysis (PCA) to reduce 6 combat stats into 2 interpretable dimensions that capture "overall battling power"
+- Applied Principal Component Analysis (PCA) to reduce 6 combat stats into 2 interpretable dimensions that capture
+"overall battling power"
 - Built an interactive Streamlit dashboard where you can visualize all 800+ Pokémon in 2D space
 - **PC1 (43.3% of variance)**: Basically "raw power" how much total stats a Pokémon has
 - **PC2 (19.1% of variance)**: Captures "stat distribution" balanced vs specialized builds
 
 **The Verdict:**
-After crunching the numbers on every Pokémon across all generations: **Mewtwo is objectively the best**. 
+After crunching the numbers on every Pokémon across all generations. Mewtwo is objectively the best. 
 
 **Why PCA?**
-You can't just add up all the stats (a Pokémon with 100 HP and 10 Attack isn't useful). PCA finds the "directions" in stat-space that matter most for battling effectiveness, then projects every Pokémon onto those axes. It's like finding the *real* dimensions that define strength.
+You can't just add up all the stats (a Pokémon with 100 HP and 10 Attack isn't useful).
+PCA finds the "directions" in stat-space that matter most for battling effectiveness,
+then projects every Pokémon onto those axes. It's like finding the real dimensions that define strength.
 
-**Explore It Yourself:** [Interactive Streamlit App](https://gregolas-poke-pca.streamlit.app/) - filter by generation, type, legendary status, and see where your favorite falls.
+**Explore It Yourself:** [Interactive Streamlit App](https://gregolas-poke-pca.streamlit.app/) - 
+filter by generation, type, legendary status, and see where your favorite falls.
 
 *** 
 
@@ -44,10 +48,8 @@ optimal portfolio each week to get the best profits in a return-risk trade-off.
 
 # 🏈 [Finding Hidden NFL Talent: What the Combine Actually Reveals](https://greg1997-dev.github.io/MyPortfolio/nflcombine.html)
 
-**The Question:** Every year, NFL teams overlook talented players in the draft who go undrafted (UDFA) despite solid combine measurements. Can we build a model to identify these hidden gems before they prove everyone wrong?
-
-**What I Built:**
-- Trained classification models (Logistic Regression vs Random Forest) to predict draft likelihood based purely on combine measurables, the same data scouts use.
+- Trained classification models (Logistic Regression vs Random Forest) to predict draft likelihood based purely on
+combine measurables, the same data scouts use.
 - Identified which physical measurements actually matter most for getting drafted.
 - Tested hypothesis: Do different positions have statistically different measurement profiles?
 - **Best model**: Logistic Regression with Lasso penalty (AUC = 0.72)
@@ -61,24 +63,28 @@ The model flagged several undrafted players as "should have been drafted":
 ***
 
 # 🎲 [Can You Beat the Lottery? Testing the "Jinxed Numbers" Myth](https://greg1997-dev.github.io/MyPortfolio/lottery.html)
-- Built 4 probabilistic models to test if Mexican Melate Retro draws show any detectable patterns (spoiler: they do, but you still shouldn't play)
-- Implemented set-likelihood MLE with dynamic programming to efficiently compute combinatorial probabilities over 3.2M possible outcomes
-- Rolling out-of-sample backtest on 100+ draws showed models consistently beat uniform random—suggesting mechanical biases in lottery equipment
+- Built 4 probabilistic models to test if Mexican Melate Retro draws show any detectable patterns
+(spoiler: they do, but you still shouldn't play)
+- Implemented set-likelihood MLE with dynamic programming to efficiently compute combinatorial probabilities over 3.2M
+possible outcomes
+- Rolling out-of-sample backtest on 100+ draws showed models consistently beat uniform random—suggesting mechanical
+biases in lottery equipment
 - Found evidence of non-stationarity: recent draws matter more (EWMA model), likely due to ball wear/replacement cycles
 - **Bottom line**: Models work way better than random, but nowhere near enough to overcome the house edge.
 
 ***
 # 🏈 [AI NFL Scout: RAG-Powered Draft Assistant That Actually Watches Tape](link-to-project)
 
-**The Problem:** NFL Draft season means drowning in scouting reports, mock drafts, and hot takes. What if you could have an AI assistant that's read *every* publicly available scouting report and can discuss prospects like an actual NFL scout?
+- Developed a Retrieval Augmented Generation (RAG) system using GeminiAPI trained on the entire corpus of 2025 NFL Draft
+scouting reports.
+- Built an agentic system that doesn't just answer questions, it can run interactive mock drafts, making picks based on
+team needs and big board rankings.
+- LLM provides detailed player assessments and can compare/contrast prospects at the same position ("Is Marvin Harrison
+Jr. or Malik Nabers the better WR1?")
 
-**What I Built:**
-- Developed a Retrieval Augmented Generation (RAG) system using GeminiAPI trained on the entire corpus of 2025 NFL Draft scouting reports
-- Built an agentic system that doesn't just answer questions—it can run interactive mock drafts, making picks based on team needs and big board rankings
-- LLM provides detailed player assessments and can compare/contrast prospects at the same position ("Is Marvin Harrison Jr. or Malik Nabers the better WR1?")
-
-**Why This Is Cool:**
-Instead of just memorizing player stats, the RAG architecture lets the AI *retrieve relevant scouting context* before answering. Ask about a linebacker's coverage skills? It pulls the actual film breakdowns that scouts wrote. Want to compare two edge rushers' pass-rush moves? It synthesizes multiple expert opinions.
+Instead of just memorizing player stats, the RAG architecture lets the AI *retrieve relevant scouting context* before
+answering. Ask about a linebacker's coverage skills? It pulls the actual film breakdowns that scouts wrote.
+Want to compare two edge rushers' pass-rush moves? It synthesizes multiple expert opinions.
 
 **The Agent Goes Further:**
 - Runs interactive mock drafts where you GM your favorite team
@@ -98,7 +104,8 @@ Instead of just memorizing player stats, the RAG architecture lets the AI *retri
     * Continuous Probability Distributions
     * Analysis of Variance
     * Experimental Design
- - **Upcoming term:** On the next term, students will have a reference guide, you can read the [WIP here](https://github.com/greg1997-dev/MyPortfolio/blob/main/assets/Prob_and_stats_ref_guide.pdf).
+ - **Upcoming term:** On the next term, students will have a reference guide, you can read the
+ - [WIP here](https://github.com/greg1997-dev/MyPortfolio/blob/main/assets/Prob_and_stats_ref_guide.pdf).
  
 
 ***
@@ -108,7 +115,8 @@ Instead of just memorizing player stats, the RAG architecture lets the AI *retri
 Sports History Odds and NFLFastR
 - Training Data of all games since 1999 to predict the 2023 season
 - 72% Accuracy Score
-- Variables referenced in [(Delen,2012)](https://www.researchgate.net/publication/257026772_A_comparative_analysis_of_data_mining_methods_in_predicting_NCAA_bowl_outcomes)
+- Variables referenced in
+[(Delen,2012)](https://www.researchgate.net/publication/257026772_A_comparative_analysis_of_data_mining_methods_in_predicting_NCAA_bowl_outcomes)
 were also relevant for our claim.
 - Beats many state-of-the-art algorithms regarding prediction of games.
 
@@ -129,7 +137,8 @@ were also relevant for our claim.
 # 🏀 [March Madness Kaggle Competition 2022](https://github.com/greg1997-dev/MyPortfolio/blob/main/notebooks/March_Madness.ipynb)
 
 - This project was used in the
-[March Machine Learning Mania 2022 - Men’s](https://www.kaggle.com/competitions/mens-march-mania-2022/overview) competition to predict the bracket
+[March Machine Learning Mania 2022 - Men’s](https://www.kaggle.com/competitions/mens-march-mania-2022/overview)
+competition to predict the bracket
 - Logistic Regression with CV was used for predicting the bracket
 - Avg. Log Loss of the algorithm 0.68492
 - Calculate probability of win for a team

@@ -172,4 +172,6 @@ with col_card:
 st.markdown("""
 ---
 💡 **Tip:** Try filtering by a single type or generation to see how clusters change.
+
+💼 [Back to Portfolio](https://greg1997-dev.github.io/MyPortfolio/)
 """)
