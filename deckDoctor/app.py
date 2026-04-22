@@ -45,7 +45,7 @@ STAPLE_LIST = [
 
 base_path = os.path.dirname(os.path.abspath(__file__))
 CHROMA_PATH = os.path.join(base_path, "yugioh_db")
-DATA_DIR = os.path.join(base_path, "data")  # Your JSON files go here
+DATA_DIR = os.path.join(base_path, "yugioh_db")  # Your JSON files go here
 COLLECTION_NAME = 'yugioh_master_collection'
 
 
