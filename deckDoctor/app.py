@@ -61,7 +61,19 @@ def get_chroma_client():
 
 client_db = get_chroma_client()
 
-collection = client_db.get_collection(name="yugioh_master_collection") 
+try:
+    collection = client_db.get_or_create_collection(
+        name="yugioh_master_collection",
+        metadata={"hnsw:space": "cosine"}
+    )
+    
+    # Check if collection is empty
+    if collection.count() == 0:
+        st.warning("⚠️ Database is empty. You need to populate it with deck data first.")
+        st.info("The collection exists but has no embeddings. Please run your data ingestion script.")
+except Exception as e:
+    st.error(f"Database error: {e}")
+    st.stop()
 
 # UI & LLM LOGIC
 st.title("Deck Doctor RAG")
