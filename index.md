@@ -24,7 +24,7 @@ filter by generation, type, legendary status, and see where your favorite falls.
 
 *** 
 
-## ⚽ [World Cup Stickers: Optimizing Collection Costs with Monte Carlo Simulation](https://greg1997-dev.github.io/MyPortfolio/world-cup-stickers.html)
+# ⚽ [World Cup Stickers: Optimizing Collection Costs with Monte Carlo Simulation](https://greg1997-dev.github.io/MyPortfolio/world-cup-stickers.html)
 
 How much does it really cost to complete a Panini World Cup sticker album?
 
