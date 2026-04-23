@@ -28,7 +28,7 @@ filter by generation, type, legendary status, and see where your favorite falls.
 
 How much does it really cost to complete a Panini World Cup sticker album?
 
-The naive math says 140 packs × 25 MXN = **3,500 MXN**. But reality? Try **26,125 MXN**—over 7× more expensive due to
+The naive math says 140 packs × 25 MXN = 3,500 MXN. But reality? Try 26,125 MXN. Over 7× more expensive due to
 the collector coupon problem.
 
 Using Monte Carlo simulation and the Coupon Collector's Problem, I modeled 10,000 different collection scenarios for the
