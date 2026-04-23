@@ -87,7 +87,7 @@ The model flagged several undrafted players as "should have been drafted":
 (spoiler: they do, but you still shouldn't play)
 - Implemented set-likelihood MLE with dynamic programming to efficiently compute combinatorial probabilities over 3.2M
 possible outcomes
-- Rolling out-of-sample backtest on 100+ draws showed models consistently beat uniform random—suggesting mechanical
+- Rolling out-of-sample backtest on 100+ draws showed models consistently beat uniform random, suggesting mechanical
 biases in lottery equipment
 - Found evidence of non-stationarity: recent draws matter more (EWMA model), likely due to ball wear/replacement cycles
 - **Bottom line**: Models work way better than random, but nowhere near enough to overcome the house edge.
