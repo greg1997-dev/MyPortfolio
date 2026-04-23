@@ -24,6 +24,26 @@ filter by generation, type, legendary status, and see where your favorite falls.
 
 *** 
 
+## ⚽ [World Cup Stickers: Optimizing Collection Costs with Monte Carlo Simulation](https://greg1997-dev.github.io/MyPortfolio/world-cup-stickers.html)
+
+How much does it really cost to complete a Panini World Cup sticker album?
+
+The naive math says 140 packs × 25 MXN = **3,500 MXN**. But reality? Try **26,125 MXN**—over 7× more expensive due to
+the collector coupon problem.
+
+Using Monte Carlo simulation and the Coupon Collector's Problem, I modeled 10,000 different collection scenarios for the
+2026 World Cup album (980 stickers, the largest ever). The analysis revealed that strategy matters.
+
+**Key findings:**
+- 📊 Random purchasing: 26,125 MXN (11 boxes of packs)
+- 🎯 Optimal "Last 50" strategy: 10,607 MXN (60% savings)
+- 🤝 Trading strategy (50% efficiency): 5,000 MXN (81% savings)
+
+This project combines childhood nostalgia with rigorous quantitative analysis, demonstrating how simulation methods can
+optimize real-world decision-making—even for something as fun as sticker collecting.
+
+***
+
 # 📈 [Markowitz Model for Optimal Portfolio](https://greg1997-dev.github.io/MyPortfolio/markowitz.html)
 **Objective:** To develop a model that helped on trading challenges to select the
 optimal portfolio each week to get the best profits in a return-risk trade-off.
@@ -73,6 +93,7 @@ biases in lottery equipment
 - **Bottom line**: Models work way better than random, but nowhere near enough to overcome the house edge.
 
 ***
+
 # 🏈 [AI NFL Scout: RAG-Powered Draft Assistant That Actually Watches Tape](link-to-project)
 
 - Developed a Retrieval Augmented Generation (RAG) system using GeminiAPI trained on the entire corpus of 2025 NFL Draft
@@ -81,15 +102,6 @@ scouting reports.
 team needs and big board rankings.
 - LLM provides detailed player assessments and can compare/contrast prospects at the same position ("Is Marvin Harrison
 Jr. or Malik Nabers the better WR1?")
-
-Instead of just memorizing player stats, the RAG architecture lets the AI *retrieve relevant scouting context* before
-answering. Ask about a linebacker's coverage skills? It pulls the actual film breakdowns that scouts wrote.
-Want to compare two edge rushers' pass-rush moves? It synthesizes multiple expert opinions.
-
-**The Agent Goes Further:**
-- Runs interactive mock drafts where you GM your favorite team
-- Makes realistic picks based on positional value + team needs (no AI is drafting a kicker in Round 1)
-- Justifies every pick with scouting report excerpts—just like real war rooms
 
 **Built for:** [Gen AI Intensive Course Capstone 2025Q1](https://www.kaggle.com/competitions/gen-ai-intensive-course-capstone-2025q1)
 
@@ -106,22 +118,9 @@ Want to compare two edge rushers' pass-rush moves? It synthesizes multiple exper
     * Experimental Design
  - **Upcoming term:** On the next term, students will have a reference guide, you can read the
 [WIP here](https://github.com/greg1997-dev/MyPortfolio/blob/main/assets/Prob_and_stats_ref_guide.pdf).
+
+***
  
-
-***
-
-# Predicting NFL Matches with different ML Models and variables
-- Using publicly available data like scraping tables from Pro Football Reference,
-Sports History Odds and NFLFastR
-- Training Data of all games since 1999 to predict the 2023 season
-- 72% Accuracy Score
-- Variables referenced in
-[(Delen,2012)](https://www.researchgate.net/publication/257026772_A_comparative_analysis_of_data_mining_methods_in_predicting_NCAA_bowl_outcomes)
-were also relevant for our claim.
-- Beats many state-of-the-art algorithms regarding prediction of games.
-
-***
-
 # 📊 [Sankey Report for Laboratory](https://lh3.googleusercontent.com/d/1jhanAZis0g85_8PCsdjMVtAIl8nMkQ2P)
  - Developed an end-to-end data pipeline to provide ad hoc analytics on 
  evaluating Lab Workers to correctly identify blood cells through a specific
@@ -147,6 +146,19 @@ competition to predict the bracket
 Purdue
 
 ***
+
+# Predicting NFL Matches with different ML Models and variables
+- Using publicly available data like scraping tables from Pro Football Reference,
+Sports History Odds and NFLFastR
+- Training Data of all games since 1999 to predict the 2023 season
+- 72% Accuracy Score
+- Variables referenced in
+[(Delen,2012)](https://www.researchgate.net/publication/257026772_A_comparative_analysis_of_data_mining_methods_in_predicting_NCAA_bowl_outcomes)
+were also relevant for our claim.
+- Beats many state-of-the-art algorithms regarding prediction of games.
+
+***
+
 
 # [NLP Project Assignment](https://github.com/greg1997-dev/MyPortfolio/blob/main/notebooks/Big_Data_Project.ipynb)
 
