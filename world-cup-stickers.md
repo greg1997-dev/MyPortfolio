@@ -1,3 +1,7 @@
+---
+layout: default
+title: World Cup Stickers
+---
 
 # World Cup Stickers How much it costs to get the whole collection? 
 
@@ -36,24 +40,32 @@ new to us. But as we rip more and more packs we are going to be frustrated.
 
 This works with the following expectancy:
 
-$$ E[X]=\sum_{k=1}^{N}\frac{N}{N-i+1} $$
+$$ 
+E[X]=\sum_{k=1}^{N}\frac{N}{N-i+1} 
+$$
 
 Let $k=N-i+1$
 
-$$ E[X]=N\sum_{k=1}^{N}\frac{1}{k}=N\cdot H(N) $$
+$$ 
+E[X]=N\sum_{k=1}^{N}\frac{1}{k}=N\cdot H(N) 
+$$
 
 where $H(N)$ is the Nth harmonic number
 
-$$ H(N)=1+\frac{1}{2}+\frac{1}{3}+...+\frac{1}{N} $$
+$$ 
+H(N)=1+\frac{1}{2}+\frac{1}{3}+...+\frac{1}{N}
+$$
 
 For large N, this behaves asymptotically as:
  
-$$H(N) \approx \ln(N) + \gamma$$
+$$
+H(N) \approx \ln(N) + \gamma
+$$
  
 where $\gamma \approx 0.5772$ is the Euler-Mascheroni constant.
  
 You need roughly $N \cdot \ln(N)$ stickers
-to complete a collection of N items **much more than just N**.
+to complete a collection of N items much more than just N.
 
 ## The theoretical Cost
 
@@ -62,12 +74,12 @@ N = 980
 
 H(980) =1+ 1/2+ 1/3+...+1/980 = 7.645
 
-Expected stickers needed = 980 × 7.465 = 7,316 stickers
-Expected packs needed = 7,316 ÷ 7 = 1,045 packs
-Expected cost = 1,045 × 25 MXN = 26,125 MXN
+Expected stickers needed = 980 x 7.465 = 7,316 stickers
+Expected packs needed = 7,316 / 7 = 1,045 packs
+Expected cost = 1,045 x 25 MXN = 26,125 MXN
 ```
 
-But this is just the **expected** cost, you could be way more unlucky.
+But this is just the expected cost, you could be way more unlucky.
 
 ## Monte Carlo Simulation
 To validate these theoretical predictions and explore the full range of outcomes, I ran 10,000 Monte Carlo
@@ -116,15 +128,16 @@ And comparing the probabilities we get:
 ## What now? 
 
 When I started this analysis, I simply wanted to understand the math behind something I've been doing passionately
-since 2002. What I discovered was both shocking and enlightening.
-The Numbers Don't Lie
+since 2002. What I discovered was the numbers don't lie.
 The reality is random purchasing would set you back around 26,125 MXN on average. That's 7.5× more expensive!
 But here's the good news: strategy matters enormously.
 Key findings:
 
-Pure random (no trading): ~26,125 MXN - financially painful and emotionally frustrating
-Buying last 50 stickers: ~10,607 MXN (60% savings!) - smart and accessible
-Active trading (50% efficiency): ~5,000 MXN (81% savings!) - the clear winner
+|Strategy| Expected cost | Savings |
+|---|--------------|---|
+| Pure random (no trading) | $26,125 MXN  | |
+|Buying last 50 stickers: | $10,607 MXN  | 60%| 
+| Active trading (50% efficiency) |  $5,000 MXN  | 81% |
 
 The mathematics revealed something I intuitively knew from years of collecting: the social element—trading with friends
 is not just fun, it's financially optimal. Those recess trades weren't just about completing our albums; they were about
