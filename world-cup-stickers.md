@@ -1,3 +1,12 @@
+---
+layout: default
+title: World Cup Stickers - Monte Carlo Analysis
+---
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 # World Cup Stickers How much it costs to get the whole collection? 
 
 ![World Cup Album](https://i0.wp.com/kupuni.mt/wp-content/uploads/2026/04/Album-and-50.png?w=963&ssl=1)
